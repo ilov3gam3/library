@@ -22,6 +22,7 @@
                                     class="logo img-responsive"
                                     src="${pageContext.request.contextPath}/assets/logo-20-footer.png"
                                     alt="Molla - Prestashop eCommerce"
+                                    style="width: 105px;"
                             />
                         </a>
                     </div>

@@ -19,6 +19,10 @@
         <filter-name>VipFilter</filter-name>
         <filter-class>Filter.VipFilter</filter-class>
     </filter>
+    <filter>
+        <filter-name>PDFFilter</filter-name>
+        <filter-class>Filter.PDFFilter</filter-class>
+    </filter>
 
     <filter-mapping>
         <filter-name>AllRouterFilter</filter-name>
@@ -35,21 +39,35 @@
         <url-pattern>/admin/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
-        <filter-name>LoginFilter</filter-name>
-        <url-pattern>/vip/*</url-pattern>
-    </filter-mapping>
-
-    <filter-mapping>
         <filter-name>AdminFilter</filter-name>
         <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/vip/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>VipFilter</filter-name>
         <url-pattern>/vip/*</url-pattern>
     </filter-mapping>
 
+
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/uploads</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>PDFFilter</filter-name>
+        <url-pattern>/uploads</url-pattern>
+    </filter-mapping>
+
     <listener>
         <listener-class>Init.ServerStartListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>Controller.Auto.ScheduledTask</listener-class>
     </listener>
 
 

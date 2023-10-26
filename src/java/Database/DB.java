@@ -4,9 +4,9 @@ import Init.Config;
 
 import java.lang.reflect.Field;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.Date;
 
 public class DB {
     public static Connection getConnection() {
@@ -117,21 +117,34 @@ public class DB {
         return input;
     }
 
-    public static void main(String[] args) {
-        String input = slurpStdin();
-        int second=Integer.parseInt(input);
-        int min= second / 60;
-        int hour= min / 60;
-        int temp1=second /60;
-        int temp2=temp1*60;
-        int finalsecond=second - temp2;
-        int temp3=min /60;
-        int temp4=temp3*60;
-        int finalmin=min -temp4;
-        String secondstring=String.valueOf(finalsecond);
-        if(finalsecond<10){
-            secondstring="0"+secondstring;
+    public int d,x,y;
+    public void extendedEuclid(int A, int B){
+        if (B == 0) {
+            d = A;
+            x = 1;
+            y = 0;
         }
-        System.out.println(hour+":"+finalmin+":"+secondstring);
+        else {
+            extendedEuclid(B, A%B);
+            int temp = x;
+            x = y;
+            y = temp - (A/B)*y;
+        }
+    }
+    public static Date[] calculateDatesAfterXMonths(int x) {
+        Calendar calendar = Calendar.getInstance();
+        Date currentDate = calendar.getTime();
+        calendar.add(Calendar.MONTH, x);
+        calendar.add(Calendar.DAY_OF_MONTH, -1); // Subtract 1 day to get the last day of the month
+        Date futureDate = calendar.getTime();
+
+        return new Date[]{currentDate, futureDate};
+    }
+    public static int daysBetweenDates(Date startDate, Date endDate) {
+        long difference = endDate.getTime() - startDate.getTime();
+        return (int) (difference / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
+    }
+    public static void main(String[] args) throws SQLException {
+        System.out.println(getConnection().getCatalog());
     }
 }

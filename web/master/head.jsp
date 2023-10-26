@@ -4,6 +4,8 @@
 <%@ page contentType="text/html;" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% MyObject user = (MyObject) session.getAttribute("login"); %>
+<% ArrayList<MyObject> genres = DB.getData("select genre.*, count(books.id) as quantity from genre left join books on genre.id = books.genre_id group by genre.id, name, genre.description", new String[]{"id", "name", "description", "quantity"}); %>
+<% ArrayList<MyObject> authors = DB.getData("select authors.*, count(books.id) as work from authors left join books on authors.id = books.author_id group by authors.id, name, dob, nationality, biography, image", new String[]{"id", "name", "dob", "nationality", "biography", "image", "work"}); %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,7 +30,7 @@
     <%--    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/theme-70a65c39.css">--%>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/assets/logo.png">
     <link rel="stylesheet"
           href="https://prestashop17.joommasters.com/molla/themes/jms_molla/assets/cache/theme-70a65c39.css"
           type="text/css" media="all">
@@ -320,38 +322,38 @@
                             </div>
                             <div class="layout-column col-auto col-right">
                                 <% if (user != null) { %>
-                                <% if (user.role_name.equals("admin")) {%>
-                                <div class="row align-items-center no-margin top-menu">
-                                    <div class="user-info btn-group align-items-center">
-                                        <% if (user.avatar.startsWith("http")) {%>
-                                            <img src="<%=user.avatar%>"
-                                                 style="width: 40px; height: 40px; object-fit: cover;border-radius: 50%;"
-                                                 alt="">
-                                        <% } else { %>
-                                            <img src="${pageContext.request.contextPath}<%=user.avatar%>"
-                                                 style="width: 40px; height: 40px; object-fit: cover;border-radius: 50%;"
-                                                 alt="">
-                                        <% } %>
-                                        <div class="dropdown">
-                                            <p id="admin_dropdown" data-toggle="dropdown" aria-haspopup="true"
-                                               aria-expanded="false" class="ml-2" style="cursor: pointer"><span
-                                                    class="text-danger">Quản trị viên</span> <%=user.name%>
-                                            </p>
-                                            <div class="dropdown-menu" aria-labelledby="admin_dropdown">
-                                                <a class="dropdown-item"
-                                                   href="${pageContext.request.contextPath}/user/profile">Tài khoản của
-                                                    bạn</a>
-                                                <a class="dropdown-item"
-                                                   href="${pageContext.request.contextPath}/admin/admin-panel">Trang
-                                                    quản trị</a>
-                                                <a class="dropdown-item"
-                                                   href="${pageContext.request.contextPath}/logout">Đăng xuất</a>
+                                    <% if (user.is_admin.equals("1")) {%>
+                                    <div class="row align-items-center no-margin top-menu">
+                                        <div class="user-info btn-group align-items-center">
+                                            <% if (user.avatar.startsWith("http")) {%>
+                                                <img src="<%=user.avatar%>"
+                                                     style="width: 40px; height: 40px; object-fit: cover;border-radius: 50%;"
+                                                     alt="">
+                                            <% } else { %>
+                                                <img src="${pageContext.request.contextPath}<%=user.avatar%>"
+                                                     style="width: 40px; height: 40px; object-fit: cover;border-radius: 50%;"
+                                                     alt="">
+                                            <% } %>
+                                            <div class="dropdown">
+                                                <p id="admin_dropdown" data-toggle="dropdown" aria-haspopup="true"
+                                                   aria-expanded="false" class="ml-2" style="cursor: pointer"><span
+                                                        class="text-danger">Quản trị viên</span> <%=user.name%>
+                                                </p>
+                                                <div class="dropdown-menu" aria-labelledby="admin_dropdown">
+                                                    <a class="dropdown-item"
+                                                       href="${pageContext.request.contextPath}/user/profile">Tài khoản của
+                                                        bạn</a>
+                                                    <a class="dropdown-item"
+                                                       href="${pageContext.request.contextPath}/admin/admin-panel">Trang
+                                                        quản trị</a>
+                                                    <a class="dropdown-item"
+                                                       href="${pageContext.request.contextPath}/logout">Đăng xuất</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <% } else {%>
-                                <div class="row align-items-center no-margin top-menu">
+                                    <% } else {%>
+                                        <div class="row align-items-center no-margin top-menu">
                                     <div class="user-info btn-group align-items-center">
                                         <% if (user.avatar.startsWith("http")) {%>
                                         <img src="<%=user.avatar%>"
@@ -365,7 +367,7 @@
                                         <div class="dropdown">
                                             <p id="user_dropdown" data-toggle="dropdown" aria-haspopup="true"
                                                aria-expanded="false" class="ml-2" style="cursor: pointer"><span
-                                                    class="text-primary">Xin chào</span> <%=user.name%>
+                                                    class="text-primary">Xin chào</span> <%=user.name%> <%=user.vip_sub_id != null ? "(vip)" : ""%>
                                             </p>
                                             <p><span
                                                     class="text-primary"> &nbsp; Số dư: <%=user.account_balance%></span>
@@ -376,30 +378,28 @@
                                                     bạn</a>
                                                 <a class="dropdown-item"
                                                    href="${pageContext.request.contextPath}/user/recharge-balance">Nạp số dư
-                                                    </a>
-                                                <%if (user.getRole_name().equals("user")) {%>
+                                                </a>
                                                 <a class="dropdown-item"
                                                    href="${pageContext.request.contextPath}/user/upgrade-vip">Nâng cấp lên tài khoản vip
                                                 </a>
-                                                <%}%>
                                                 <a class="dropdown-item"
                                                    href="${pageContext.request.contextPath}/logout">Đăng xuất</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <%}%>
+                                    <%}%>
                                 <%} else {%>
-                                <div class="row align-items-center no-margin top-menu">
-                                    <div class="user-info btn-group">
-                                        <a href="${pageContext.request.contextPath}/register">
-                                            <button class="btn btn-outline-dark mr-2">Đăng kí</button>
-                                        </a>
-                                        <a href="${pageContext.request.contextPath}/login">
-                                            <button class="btn btn-primary ml-2">Đăng nhập</button>
-                                        </a>
+                                    <div class="row align-items-center no-margin top-menu">
+                                        <div class="user-info btn-group">
+                                            <a href="${pageContext.request.contextPath}/register">
+                                                <button class="btn btn-outline-dark mr-2">Đăng kí</button>
+                                            </a>
+                                            <a href="${pageContext.request.contextPath}/login">
+                                                <button class="btn btn-primary ml-2">Đăng nhập</button>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
                                 <%}%>
                             </div>
                         </div>
@@ -415,22 +415,19 @@
                                     <img
                                             class="logo img-responsive"
                                             src="${pageContext.request.contextPath}/assets/logo-20.png"
-                                            alt="Molla - Prestashop eCommerce"
+                                            alt="Molla - Prestashop eCommerce" style="width: 105px"
                                     />
                                 </a>
                             </div>
                             <div class="layout-column header-center">
                                 <div id="search-form" class="search-form">
                                     <form method="get"
-                                          action="https://prestashop17.joommasters.com/molla/index.php?controller=search"
+                                          action="${pageContext.request.contextPath}/search"
                                           class="search-box">
-                                        <input type="hidden" name="controller" value="search"/>
-                                        <input type="hidden" name="orderby" value="position"/>
-                                        <input type="hidden" name="orderway" value="desc"/>
                                         <div class="input-group">
-                                            <input type="text" name="search_query" placeholder="Search product ..."
-                                                   class="gdz-search-input form-control search-input"/>
-                                            <button type="submit" name="submit_search" class="button-search">
+                                            <input id="keyword" type="text" name="keyword" placeholder="Search product ..."
+                                                   class="form-control"/>
+                                            <button type="submit" class="button-search">
                                                 <i class="icon-search"></i>
                                             </button>
                                         </div>
@@ -440,20 +437,26 @@
                             </div>
                             <div class="layout-column col-auto header-right">
                                 <div class="row">
-                                    <div class="account">
+                                    <div style="padding: 10px" class="account">
                                         <a href="${pageContext.request.contextPath}/user/profile"
                                            title="Login/Register">
                                             <i class="icon-user"></i>
                                             <span class="text">Account</span>
                                         </a>
                                     </div>
-                                    <div id="wishlist_block" class="wishlist col-auto">
+                                    <div style="padding: 10px" id="wishlist_block" class="wishlist col-auto">
                                         <a href="${pageContext.request.contextPath}/user/favorite-list">
                                             <i class="icon-heart-o"></i>
-                                            <span class="text">Danh sách ưa thích</span>
+                                            <span class="text">Ưa thích</span>
                                         </a>
                                     </div>
-                                    <div id="" class="wishlist col-auto">
+                                    <div style="padding: 10px" class="wishlist col-auto">
+                                        <a href="${pageContext.request.contextPath}/user/renting">
+                                            <i class="fa fa-book" aria-hidden="true"></i>
+                                            <span class="text">Sách thuê</span>
+                                        </a>
+                                    </div>
+                                    <div style="padding: 10px" id="" class="wishlist col-auto">
                                         <a href="${pageContext.request.contextPath}/logout">
                                             <i class="fa fa-sign-out"></i>
                                             <span class="text">Đăng xuất</span>
@@ -470,15 +473,14 @@
                             <div class="layout-column col-auto col-left">
                                 <div class="vermenu d-flex align-items-center">
                                     <a href="#" class="vermenu-btn align-items-center">
-                                        Browse Categories
+                                        Thể loại
                                     </a>
                                     <div class="menu-dropdown navbar">
                                         <div class="gdz-megamenu navbar">
                                             <ul class="nav level0">
-                                                <% ArrayList<MyObject> genres = DB.getData("select * from genre", new String[]{"id", "name", "description"}); %>
                                                 <% for (int i = 0; i < genres.size(); i++) { %>
                                                     <li class="menu-item" data-id="385" data-level="0" data-title="1">
-                                                        <a href="#" target="_self"><span><%= genres.get(i).name %></span>
+                                                        <a href="${pageContext.request.contextPath}/search?genre_id=<%=genres.get(i).id%>" target="_self"><span><%= genres.get(i).name %> (<%=genres.get(i).quantity%>)</span>
                                                         </a>
                                                     </li>
                                                 <% } %>
@@ -793,65 +795,20 @@
                                             </li>
                                             <li class="menu-item mega" data-id="389" data-level="0" data-title="1"><a
                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_cms=4&controller=cms&id_lang=1"
-                                                    target="_self"><span>Pages</span><em class="caret"></em></a>
+                                                    target="_self"><span>Tác giả</span><em class="caret"></em></a>
                                                 <div class="nav-child dropdown-menu mega-dropdown-menu">
                                                     <div class="mega-dropdown-inner">
                                                         <div class="row">
                                                             <div class="mega-col-nav col-sm-12" data-width="12">
                                                                 <div class="mega-inner">
                                                                     <ul class="mega-nav">
-                                                                        <li class="menu-item mega" data-id="439"
-                                                                            data-level="1" data-title="1"><a
-                                                                                href="https://prestashop17.joommasters.com/molla/index.php?id_cms=4&controller=cms&id_lang=1"
-                                                                                target="_self"><span>About</span></a>
-                                                                            <div class="nav-child dropdown-menu mega-dropdown-menu">
-                                                                                <div class="mega-dropdown-inner">
-                                                                                    <div class="row">
-                                                                                        <div class="mega-col-nav col-sm-12"
-                                                                                             data-width="12">
-                                                                                            <div class="mega-inner">
-                                                                                                <ul class="mega-nav">
-                                                                                                    <li class="menu-item"
-                                                                                                        data-id="463"
-                                                                                                        data-level="2"
-                                                                                                        data-title="1">
-                                                                                                        <a href="index.php?id_cms=4&controller=cms&id_lang=1"
-                                                                                                           target="_self"><span>About 1</span></a>
-                                                                                                    </li>
-                                                                                                    <li class="menu-item"
-                                                                                                        data-id="464"
-                                                                                                        data-level="2"
-                                                                                                        data-title="1">
-                                                                                                        <a href="index.php?id_cms=15&controller=cms&id_lang=1"
-                                                                                                           target="_self"><span>About 2</span></a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="menu-item" data-id="440"
-                                                                            data-level="1" data-title="1"><a
-                                                                                href="index.php?controller=contact"
-                                                                                target="_self"><span>Contact</span></a>
-                                                                        </li>
-                                                                        <li class="menu-item" data-id="441"
-                                                                            data-level="1" data-title="1"><a
-                                                                                href="index.php?controller=my-account"
-                                                                                target="_self"><span>Login</span></a>
-                                                                        </li>
-                                                                        <li class="menu-item" data-id="442"
-                                                                            data-level="1" data-title="1"><a
-                                                                                href="https://prestashop17.joommasters.com/molla/index.php?id_cms=7&controller=cms&id_lang=1"
-                                                                                target="_self"><span>FAQs</span></a>
-                                                                        </li>
-                                                                        <li class="menu-item" data-id="443"
-                                                                            data-level="1" data-title="1"><a
-                                                                                href="index.php?controller=404"
-                                                                                target="_self"><span>Error 404</span></a>
-                                                                        </li>
+                                                                        <% for (int i = 0; i < authors.size(); i++) { %>
+                                                                            <li class="menu-item"
+                                                                                data-level="1" data-title="1"><a
+                                                                                    href="${pageContext.request.contextPath}/view-author?id=<%=authors.get(i).id%>"
+                                                                                    target="_self"><span><%=authors.get(i).name%> (<%=authors.get(i).work%>)</span></a>
+                                                                            </li>
+                                                                        <% } %>
                                                                     </ul>
                                                                 </div>
                                                             </div>

@@ -34,8 +34,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
-import java.util.UUID;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -95,9 +95,9 @@ public class UserController {
             if (check_email && check_phone) {
                 String uuid = UUID.randomUUID().toString();
                 if (re_password.equals(password)) {
-                    String sql = "insert into users(name, email, phone, avatar, dob, address, password, is_verify, role_id, is_block, uuid, gender) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+                    String sql = "insert into users(name, email, phone, avatar, dob, address, password, is_verify, id_admin, is_block, uuid, gender) values (?,?,?,?,?,?,?,?,?,?,?,?)";
                     password = BCrypt.hashpw(password, BCrypt.gensalt(WORK_FACTOR));
-                    String[] vars = {name, email, phone, "/assets/default-avatar.webp", dob, address, password, "false", "1", "false", uuid, gender};
+                    String[] vars = {name, email, phone, "/assets/default-avatar.webp", dob, address, password, "false", "false", "false", uuid, gender};
                     boolean check = DB.executeUpdate(sql, vars);
                     if (check) {
                         ExecutorService executorService = Executors.newSingleThreadExecutor();
@@ -160,9 +160,11 @@ public class UserController {
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             String email = req.getParameter("email");
             String password = req.getParameter("password");
-            String sql = "select users.*, roles.name as role_name from users inner join roles on users.role_id = roles.id where email = ?";
-            String[] vars = {email};
-            String[] fields = new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "password", "is_verify", "role_id", "is_block", "uuid", "gender", "role_name", "account_balance"};
+            Date currentDate = Calendar.getInstance().getTime();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String sql = "select users.*, vip_subscriptions.id as vip_sub_id from users left join vip_subscriptions on users.id = vip_subscriptions.user_id and vip_subscriptions.from_date < ? and to_date > ? where email = ?";
+            String[] vars = {dateFormat.format(currentDate), dateFormat.format(currentDate), email};
+            String[] fields = new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "password", "is_verify", "is_admin", "is_block", "uuid", "gender", "is_admin", "account_balance", "vip_sub_id"};
             ArrayList<MyObject> user = DB.getData(sql, vars, fields);
             boolean login_status;
             if (user.size() == 0) {
@@ -183,7 +185,7 @@ public class UserController {
             }
             if (login_status) {
                 req.getSession().setAttribute("login", user.get(0));
-                resp.sendRedirect(req.getContextPath());
+                resp.sendRedirect(req.getContextPath() + "/");
             } else {
                 req.getSession().setAttribute("email", email);
                 req.getSession().setAttribute("password", password);
@@ -438,7 +440,9 @@ public class UserController {
                                 objectMapper = new ObjectMapper();
                                 jsonResponse = objectMapper.readTree(responseStringFromGet);
                                 String email = jsonResponse.get("email").asText();
-                                ArrayList<MyObject> user = DB.getData("select users.*, roles.name as role_name from users inner join roles on users.role_id = roles.id where email = ?", new String[]{email}, new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "password", "is_verify", "role_id", "is_block", "uuid", "gender", "role_name", "account_balance"});
+                                Date currentDate = Calendar.getInstance().getTime();
+                                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                                ArrayList<MyObject> user = DB.getData("select users.*, vip_subscriptions.id as vip_sub_id from users left join vip_subscriptions on users.id = vip_subscriptions.user_id and vip_subscriptions.from_date < ? and to_date > ? where email = ?", new String[]{dateFormat.format(currentDate), dateFormat.format(currentDate), email}, new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "password", "is_verify", "is_admin", "is_block", "uuid", "gender", "account_balance", "vip_sub_id"});
                                 if (user.size() == 0) {
                                     String name = jsonResponse.get("name").asText();
                                     String avatar = jsonResponse.get("picture").asText();
@@ -505,12 +509,14 @@ public class UserController {
             boolean register_success = true;
             if (check_phone) {
                 if (password.equals(re_password)) {
-                    String sql = "insert into users(name, email, phone,  dob, address, password, is_verify, role_id, is_block, avatar, gender, account_balance) values (?,?,?,?,?,?,?,?,?,?,?,0)";
+                    String sql = "insert into users(name, email, phone,  dob, address, password, is_verify, is_admin, is_block, avatar, gender, account_balance) values (?,?,?,?,?,?,?,?,?,?,?, 0)";
                     password = BCrypt.hashpw(password, BCrypt.gensalt(WORK_FACTOR));
-                    String[] vars = {name, email, phone, dob, address, password, "true", "1", "false", avatar, gender};
+                    String[] vars = {name, email, phone, dob, address, password, "true", "false", "false", avatar, gender};
                     boolean check = DB.executeUpdate(sql, vars);
                     if (check) {
-                        MyObject user = DB.getData("select users.*, roles.name as role_name from users inner join roles on users.role_id = roles.id where email = ?", new String[]{email}, new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "password", "is_verify", "role_id", "is_block", "uuid", "gender", "role_name", "account_balance"}).get(0);
+                        Date currentDate = Calendar.getInstance().getTime();
+                        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                        MyObject user = DB.getData("select users.*, vip_subscriptions.id as vip_sub_id from users left join vip_subscriptions on users.id = vip_subscriptions.user_id and vip_subscriptions.from_date < ? and to_date > ? where email = ?", new String[]{dateFormat.format(currentDate), dateFormat.format(currentDate), email}, new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "password", "is_verify", "is_admin", "is_block", "uuid", "gender", "account_balance", "vip_sub_id"}).get(0);
                         req.getSession().setAttribute("login", user);
                         req.getSession().setAttribute("mess", "success|Đăng kí thành công.");
                     } else {
@@ -536,26 +542,83 @@ public class UserController {
 
     @WebServlet("/user/upgrade-vip")
     public static class UpgradeVip extends HttpServlet {
+        static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        public static Date[] calculateDatesAfterXMonths(int x) {
+            Calendar calendar = Calendar.getInstance();
+            Date currentDate = calendar.getTime();
+            calendar.add(Calendar.MONTH, x);
+            calendar.add(Calendar.DAY_OF_MONTH, -1); // Subtract 1 day to get the last day of the month
+            Date futureDate = calendar.getTime();
+            return new Date[]{currentDate, futureDate};
+        }
+        public static boolean checkVipSub(String user_id, Date date){
+            String sql = "select * from vip_subscriptions where from_date < ? and to_date > ? and user_id = ?";
+            ArrayList<MyObject> a = DB.getData(sql, new String[]{dateFormat.format(date),dateFormat.format(date), user_id}, new String[]{"id"});
+            if (a.size() == 0){
+                return true;
+            }
+            return false;
+        }
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             req.getRequestDispatcher("/views/user/upgrade-vip.jsp").forward(req, resp);
         }
-
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             MyObject user = (MyObject) req.getSession().getAttribute("login");
-            String sql = "update users set role_id = (select id from roles where roles.name = 'vip'), account_balance = account_balance - ? where users.id = ?;";
-            String[] vars = new String[]{String.valueOf(Config.vip_amount), user.id};
-            boolean check = DB.executeUpdate(sql, vars);
-            if (check) {
-                req.getSession().setAttribute("mess", "success|Nâng tài khoản vip thành công.");
-                user.role_name = "vip";
-                user.account_balance = String.valueOf(Integer.parseInt(user.account_balance) - Config.vip_amount);
-                req.getSession().setAttribute("login", user);
+            int months = Integer.parseInt(req.getParameter("months"));
+            System.out.println(months);
+            Date[] dates = calculateDatesAfterXMonths(months);
+            if (checkVipSub(user.id, dates[0])){
+                int discount = 0;
+                boolean stop = false;
+                switch (months){
+                    case 1:{
+                        discount = 0;
+                        break;
+                    }
+                    case 3:{
+                        discount = 10;
+                        break;
+                    }
+                    case 6:{
+                        discount = 15;
+                        break;
+                    }
+                    case 9:{
+                        discount = 20;
+                        break;
+                    }
+                    case 12:{
+                        discount = 25;
+                        break;
+                    }
+                    default:{
+                        req.getSession().setAttribute("mess", "Số tháng không hợp lệ.");
+                        stop = true;
+                        resp.sendRedirect(req.getContextPath() + "/user/upgrade-vip");
+                    }
+                }
+                if (!stop){
+                    System.out.println(discount);
+                    float money = (float)months * (float)Config.vip_amount * (1 - (float)discount/100);
+                    String sql = "insert into vip_subscriptions(user_id, from_date, to_date, price, discount) values (?, ?, ?, ?, ?);update users set account_balance = account_balance - ? where id = ?";
+                    String[] vars = new String[]{user.id, dateFormat.format(dates[0]),dateFormat.format(dates[1]), String.valueOf((int) money), String.valueOf(discount), String.valueOf((int) money), user.id};
+                    boolean check = DB.executeUpdate(sql, vars);
+                    if (check){
+                        user.account_balance = String.valueOf(Integer.parseInt(user.account_balance) - (int) money);
+                        user.vip_sub_id = "0";
+                        req.getSession().setAttribute("login", user);
+                        req.getSession().setAttribute("mess", "success|Nâng cấp tài khoản thành công");
+                    } else {
+                        req.getSession().setAttribute("mess", "error|Nâng cấp tài khoản không thành công");
+                    }
+                    resp.sendRedirect(req.getContextPath() + "/user/upgrade-vip");
+                }
             } else {
-                req.getSession().setAttribute("mess", "success|Có lỗi từ hệ thống, vui lòng liên hệ admin.");
+                req.getSession().setAttribute("mess", "warning|Chưa thể gia hạn vip do thời hạn vip của bạn chưa hết.");
+                resp.sendRedirect(req.getContextPath() + "/user/upgrade-vip");
             }
-            resp.sendRedirect(req.getContextPath() + "/");
         }
     }
 
@@ -569,13 +632,9 @@ public class UserController {
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             String sql = "select * from users";
-            String[] var = new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "is_verify", "role_id", "is_block", "gender"};
+            String[] var = new String[]{"id", "name", "email", "phone", "avatar", "dob", "address", "is_verify", "is_admin", "is_block", "gender"};
             ArrayList<MyObject> user = DB.getData(sql, var);
-            sql = "select * from roles";
-            var = new String[]{"id", "name"};
-            ArrayList<MyObject> roles = DB.getData(sql, var);
             req.setAttribute("users", user);
-            req.setAttribute("roles", roles);
             req.getRequestDispatcher("/views/admin/user.jsp").forward(req, resp);
         }
 
@@ -652,7 +711,6 @@ public class UserController {
             String update_phone = req.getParameter("update_phone");
             String update_gender = req.getParameter("update_gender");
             String update_dob = req.getParameter("update_dob");
-            String update_role = req.getParameter("update_role");
             String update_address = req.getParameter("update_address");
             String password = req.getParameter("update_password").equals("") ? "" : BCrypt.hashpw(req.getParameter("update_password"), BCrypt.gensalt(WORK_FACTOR));
 
@@ -671,8 +729,8 @@ public class UserController {
                 newFileName = "";
             }
 
-            String sql = "update users set name = ?, email = ?, phone = ?, avatar = IIF(? = '', avatar, ?), dob = ?, address = ?, password = IIF(? = '', password, ?), gender = ?, role_id = ? where id = ?";
-            String[] vars = new String[]{update_name, update_email, update_phone, newFileName, newFileName, update_dob, update_address, password, password, update_gender,update_role, update_id};
+            String sql = "update users set name = ?, email = ?, phone = ?, avatar = IIF(? = '', avatar, ?), dob = ?, address = ?, password = IIF(? = '', password, ?), gender = ? where id = ?";
+            String[] vars = new String[]{update_name, update_email, update_phone, newFileName, newFileName, update_dob, update_address, password, password, update_gender, update_id};
             boolean check = DB.executeUpdate(sql, vars);
             if (check) {
                 req.getSession().setAttribute("mess", "success|Cập nhật thành công.");

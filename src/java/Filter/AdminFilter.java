@@ -14,7 +14,7 @@ public class AdminFilter implements Filter{
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         MyObject user = (MyObject) req.getSession().getAttribute("login");
-        if (user.getRole_name().equals("admin")){
+        if (user.is_admin.equals("1")){
             chain.doFilter(request, response);
         } else {
             req.getSession().setAttribute("mess", "warning|Bạn không có quyền quản trị viên.");

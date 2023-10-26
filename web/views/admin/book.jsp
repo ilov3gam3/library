@@ -19,6 +19,7 @@
                 <th class="text-center">Mô tả</th>
                 <th >Tác giả</th>
                 <th >Thể loại</th>
+                <th >Năm</th>
                 <th class="text-center">Số lượng</th>
                 <th class="col-2">Ảnh bìa</th>
                 <th >Khả dụng</th>
@@ -33,6 +34,7 @@
                 <td>${book.getDescription()}</td>
               <td>${book.getAuthor_name()}</td>
               <td>${book.getGenre_name()}</td>
+              <td>${book.getYear()}</td>
                 <td class="text-center">${book.getQuantity()}</td>
                 <td class="col-2">
                     <img src="${pageContext.request.contextPath}${book.getCover_image()}" alt="">
@@ -58,7 +60,7 @@ min-width: 70px;" class="btn btn-primary text-center">xem file</a>
 min-width: 70px;">Xóa
                         </button>
                     </a>
-                    <button type="button" onclick="showMyModal('${book.getId()}','${book.getTitle()}','${book.getDescription()}','${book.getAuthor_name()}','${book.getGenre_name()}','${book.getQuantity()}','${book.price}','${book.getCover_image()}','${book.getSoft_file()}')" data-toggle="modal" data-target="#editModal" class="btn btn-warning btn-block" style="
+                    <button type="button" onclick="showMyModal('${book.getId()}','${book.getTitle()}','${book.getDescription()}','${book.getAuthor_name()}','${book.getGenre_name()}','${book.getQuantity()}','${book.price}','${book.getCover_image()}','${book.getSoft_file()}', '${book.getYear()}')" data-toggle="modal" data-target="#editModal" class="btn btn-warning btn-block" style="
         border-top-width: 0;
         border-left-width: 0;
         border-right-width: 0;
@@ -134,6 +136,11 @@ min-width: 70px;">Xóa
                                     </c:forEach>
                                 </select>
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="year">Năm hoàn thành</label>
+                            <input type="text" name="year" id="year" required class="form-control">
                         </div>
 
                         <div class="form-group row justify-content-center ">
@@ -244,7 +251,6 @@ min-width: 70px;">Xóa
                             <div class="col-md-12">
                                 <select name="update_author_id" id="update_author_id" data-placeholder="Chọn tác giả"
                                         class="form-control">
-                                    <option value=""></option>
                                     <c:forEach items="${authors}" var="author">
                                         <option value="${author.getId()}">${author.getName()}</option>
                                     </c:forEach>
@@ -259,12 +265,16 @@ min-width: 70px;">Xóa
                             <div class="col-md-12">
                                 <select name="update_genre_id" id="update_genre_id" data-placeholder="Chọn thể loại"
                                         class="form-control">
-                                    <option value=""></option>
                                     <c:forEach items="${genres}" var="genre">
                                         <option value="${genre.getId()}">${genre.getName()}</option>
                                     </c:forEach>
                                 </select>
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="year_update">Năm hoàn thành</label>
+                            <input type="text" name="year_update" id="year_update" required class="form-control">
                         </div>
 
                         <div class="form-group row align-items-center ">
@@ -291,9 +301,9 @@ min-width: 70px;">Xóa
                                 <input hidden class="form-control" id="update_image" name="update_image" type="file"  required="">
                             </div>
                         </div>
-                        <div class="form-group row align-items-center ">
-                            <div class="col-md-12">
-                                <img id="update_previewImage" hidden="until-found" alt="Uploaded Image" style="max-height: 400px; width: 100%" >
+                        <div class="form-group row ">
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <img id="update_previewImage" style="width: 400px" >
                             </div>
                         </div>
 
@@ -304,7 +314,6 @@ min-width: 70px;">Xóa
                         </div>
                         <div class="container">
                             <div class="form-group row align-items-center ">
-
                                 <button class="btn btn-outline-primary-2 btn-block" id="submit_update" type="submit">
                                     Cập nhật
                                 </button>
@@ -319,7 +328,8 @@ min-width: 70px;">Xóa
 </div>
 <%@ include file="/master/foot.jsp" %>
 <script>
-    function showMyModal(id, name, description,author,genre,quantity,price,book_cover,soft_file) {
+    const contextPath = '${pageContext.request.contextPath}'
+    function showMyModal(id, name, description,author,genre,quantity,price,book_cover,soft_file, year) {
         $("#update_title").val(name)
         $("#id").val(id)
         $("#update_price").val(price)
@@ -327,8 +337,8 @@ min-width: 70px;">Xóa
         $("#update_genre_id").val(genre)
         $("#update_description").val(description)
         $("#update_quantity").val(quantity)
-        $("#update_image").val(book_cover)
-        $("#update_soft_file").val(soft_file)
+        $("#update_previewImage").attr("src", contextPath + book_cover)
+        $("#year_update").val(year)
     }
     $(document).ready(function () {
         document.getElementById('image').addEventListener('change', function (e) {
@@ -360,4 +370,5 @@ min-width: 70px;">Xóa
             $("#update_soft_file").val("")
         });
     })
+    $("#table").DataTable()
 </script>

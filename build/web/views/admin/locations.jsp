@@ -39,6 +39,7 @@
           <th>Phòng</th>
           <th>Kệ sách</th>
           <th>Ngăn</th>
+          <th>Số lượng sách</th>
         </tr>
         </thead>
         <tbody>
@@ -48,6 +49,11 @@
             <td>${location.getRoom()}</td>
             <td>${location.getBookshelf()}</td>
             <td>${location.getShelf()}</td>
+            <td>
+              <a href="${pageContext.request.contextPath}/admin/view-books-in-location?location_id=${location.getId()}">
+                <button class="btn btn-primary">${location.getQuantity()}</button>
+              </a>
+            </td>
           </tr>
         </c:forEach>
         </tbody>

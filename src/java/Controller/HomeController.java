@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -17,7 +19,7 @@ public class HomeController {
     public static class Home extends HttpServlet{
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            req.getRequestDispatcher("home.jsp").forward(req,resp);
+            req.getRequestDispatcher("/views/home.jsp").forward(req,resp);
         }
     }
 
@@ -32,7 +34,7 @@ public class HomeController {
                 e.printStackTrace();
             }
             req.setAttribute("catalog", catalog);
-            req.getRequestDispatcher("/database.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/database.jsp").forward(req, resp);
         }
     }
 
@@ -40,7 +42,22 @@ public class HomeController {
     public static class RecreateDB extends HttpServlet{
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String sql = "IF OBJECT_ID('favorites', 'U') IS NOT NULL drop table favorites\n" +
+            String sqlFilePath = getServletContext().getRealPath("/WEB-INF/init.sql");
+            StringBuilder sqlContent = new StringBuilder();
+            try (BufferedReader reader = new BufferedReader(new FileReader(sqlFilePath))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    sqlContent.append(line).append("\n");
+                }
+            }
+            boolean check = DB.executeUpdate(String.valueOf(sqlContent));
+            if (check){
+                req.getSession().setAttribute("mess", "success|Tạo thành công.");
+            } else {
+                req.getSession().setAttribute("mess", "error|Tạo không thành công.");
+            }
+            resp.sendRedirect(req.getContextPath() + "/");
+            /*String sql = "IF OBJECT_ID('favorites', 'U') IS NOT NULL drop table favorites\n" +
                     "\n" +
                     "IF OBJECT_ID('payments', 'U') IS NOT NULL drop table payments\n" +
                     "\n" +
@@ -277,7 +294,7 @@ public class HomeController {
             } else {
                 req.getSession().setAttribute("mess", "error|Tạo không thành công.");
             }
-            resp.sendRedirect(req.getContextPath() + "/");
+            resp.sendRedirect(req.getContextPath() + "/");*/
         }
     }
 }

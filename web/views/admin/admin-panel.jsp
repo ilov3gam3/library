@@ -66,7 +66,7 @@
       <div class="col-6 ">
         <a href="${pageContext.request.contextPath}/admin/user" style="width: 100%">
           <button class="btn btn-primary btn-block">
-            QUản lý người dùng
+            Quản lý người dùng
           </button>
         </a>
       </div>

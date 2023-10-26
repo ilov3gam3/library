@@ -17,7 +17,7 @@ public class RentalController {
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             String sql = "select rentals.*, users.name as user_name, books.title as book_title from rentals inner join users on rentals.user_id = users.id inner join books on rentals.book_id = books.id";
-            String[] fields = new String[]{"id", "book_id", "user_id", "from_date", "to_date", "price", "received_book", "returned_book", "created_at", "user_name", "created_at", "book_title"};
+            String[] fields = new String[]{"id", "book_id", "user_id", "from_date", "to_date", "price", "received_book", "returned_book", "created_at", "user_name", "created_at", "book_title", "status"};
             ArrayList<MyObject> rentals = DB.getData(sql, fields);
             req.setAttribute("rentals", rentals);
             req.getRequestDispatcher("/views/admin/rental.jsp").forward(req, resp);

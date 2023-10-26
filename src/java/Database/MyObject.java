@@ -14,12 +14,10 @@ public class MyObject {
     public String address;
     public String password;
     public String is_verify;
-    public String role_id;
     public String is_block;
     public String uuid;
     public String gender;
     public String re_password;
-    public String role_name;
     public String description;
     public String nationality;
     public String biography;
@@ -61,4 +59,16 @@ public class MyObject {
     public String from_date;
     public String to_date;
     public String book_id;
+    public String note;
+    public String work;
+    public String year;
+    public String status;
+    public String is_admin;
+    public String vip_sub_id;
+    public String content;
+    public String rating;
+
+    public static void main(String[] args) {
+//        System.out.println(this.getSoft_file());
+    }
 }

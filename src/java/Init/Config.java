@@ -15,10 +15,10 @@ import javax.crypto.spec.SecretKeySpec;
 import jakarta.servlet.http.HttpServletRequest;
 public class Config {
     public static String contextPath = "";
-    public static String db_server = "192.168.1.44";
+    public static String db_server = "minh.database.windows.net";
     public static String db_port = "1433";
     public static String db_username = "minh";
-    public static String db_password = "Minh1234";
+    public static String db_password = "Matkhaulagivaytroi1";
     public static String db_name = "library";
     public static String email_address = "tranquangminh116@gmail.com";
     public static String email_password = "iahskjpdwuvcyzym";

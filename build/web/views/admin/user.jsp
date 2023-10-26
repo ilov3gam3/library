@@ -36,7 +36,7 @@
             <td>${user.dob}</td>
             <td>${user.address}</td>
             <td>${user.is_verify  == "1" ? "Đã xác thực" : "Chưa xác thực"}</td>
-            <td>${user.getRole_name() }</td>
+            <td>${user.getIs_admin() == "1" ? "admin" : "user"}</td>
             <td>
               <select onchange="changeIsBlock('${user.getId()}', this.value)" name="block">
                 <option ${user.is_block  == "1" ? "selected " : ""} value="true">Có</option>
@@ -66,7 +66,7 @@
     border-right-width: 0;
     padding-right: 0;
     padding-left: 0;
-min-width: 70px;" class="btn btn-warning" data-toggle="modal" data-target="#editModal" onclick="showUpdateModal('${user.getId()}', '${user.getName()}', '${user.getEmail()}', '${user.getPhone()}', '${user.getAvatar()}', '${user.getDob()}', '${user.getAddress()}', '${user.getRole_id()}','${user.getGender()}')" >Edit</a>
+min-width: 70px;" class="btn btn-warning" data-toggle="modal" data-target="#editModal" onclick="showUpdateModal('${user.getId()}', '${user.getName()}', '${user.getEmail()}', '${user.getPhone()}', '${user.getAvatar()}', '${user.getDob()}', '${user.getAddress()}','${user.getGender()}')" >Edit</a>
             </td>
           </tr>
         </c:forEach>
@@ -133,14 +133,6 @@ min-width: 70px;" class="btn btn-warning" data-toggle="modal" data-target="#edit
                       <input type="text" class="form-control" name="update_password" id="update_password">
                   </div>
                   <div class="form-group">
-                      <label for="update_role">Loại tài khoản</label>
-                      <select class="form-control" name="update_role" id="update_role">
-                          <c:forEach items="${roles}" var="role">
-                              <option id="${role.id}" value="${role.id}">${role.name}</option>
-                          </c:forEach>
-                      </select>
-                  </div>
-                  <div class="form-group">
                       <button class="btn btn-primary">Cập nhật</button>
                   </div>
               </form>
@@ -200,7 +192,7 @@ document.getElementById('update_avatar').addEventListener('change', function (e)
     }
     reader.readAsDataURL(file);
 });
-function showUpdateModal(id, name, email, phone, avatar, dob, address, role_id, gender) {
+function showUpdateModal(id, name, email, phone, avatar, dob, address, gender) {
     $("#update_id").val(id)
     $("#update_name").val(name)
     $("#update_email").val(email)
@@ -211,12 +203,6 @@ function showUpdateModal(id, name, email, phone, avatar, dob, address, role_id, 
         $("#update_gender_male").attr("selected", true)
     } else {
         $("#update_gender_female").attr("selected", true)
-    }
-    $("#update_role").val(role_id)
-    if (avatar.startsWith("http")){
-        $("#update_avatar_img").attr("src", avatar)
-    } else {
-        $("#update_avatar_img").attr("src", '${pageContext.request.contextPath}' + avatar)
     }
 }
 </script>

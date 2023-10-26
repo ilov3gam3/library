@@ -121,5 +121,23 @@ public class AuthorController {
             }
         }
     }
-
+    @WebServlet("/view-author")
+    public static class ViewAuthor extends HttpServlet{
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            String id = req.getParameter("id");
+            String sql = "select * from authors where id = ?";
+            ArrayList<MyObject> authors = DB.getData(sql, new String[]{id}, new String[]{"id", "name", "dob", "nationality", "biography", "image"});
+            if (authors.size() == 0){
+                req.getSession().setAttribute("mess", "warning|Tác giả không tồn tại");
+                resp.sendRedirect(req.getContextPath() + "/");
+            } else {
+                sql = "select books.*, genre.name as genre_name from books inner join authors on books.author_id = authors.id inner join genre on books.genre_id = genre.id where author_id = ?";
+                ArrayList<MyObject> books = DB.getData(sql, new String[]{id}, new String[]{"id", "title", "description", "author_id", "genre_id", "quantity", "cover_image","price", "soft_file", "available", "genre_name", "year"});
+                req.setAttribute("author", authors.get(0));
+                req.setAttribute("books", books);
+                req.getRequestDispatcher("/views/view-author.jsp").forward(req, resp);
+            }
+        }
+    }
 }
