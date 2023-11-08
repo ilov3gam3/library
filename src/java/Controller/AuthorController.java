@@ -87,7 +87,7 @@ public class AuthorController {
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             String[] id = new String[]{req.getParameter("id")};
             String sql = "select * from authors where id = ?";
-            String[] field = new String[]{"id","name","description"};
+            String[] field = new String[]{"id","name","biography", "dob", "nationality", "image"};
             ArrayList<MyObject> genre_list = DB.getData(sql,id,field);
             if (DB.getData(sql,id,field).size()==0){
                 req.getSession().setAttribute("mess","warning|Không tồn tại");

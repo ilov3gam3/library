@@ -1,5 +1,6 @@
 package Database;
 
+import Controller.UserController;
 import Init.Config;
 
 import java.lang.reflect.Field;
@@ -145,6 +146,7 @@ public class DB {
         return (int) (difference / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
     }
     public static void main(String[] args) throws SQLException {
-        System.out.println(getConnection().getCatalog());
+        boolean check_phone = UserController.RegisterController.checkPhone("+84763416782");
+        System.out.println(check_phone);
     }
 }

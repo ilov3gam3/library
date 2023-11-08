@@ -71,9 +71,27 @@
         </a>
       </div>
       <div class="col-6 ">
-        <a href="${pageContext.request.contextPath}/admin/rentals" style="width: 100%">
+        <a href="${pageContext.request.contextPath}/admin/find-book-location" style="width: 100%">
           <button class="btn btn-primary btn-block">
-            Quản lý đơn mượn sách
+            Tìm vị trí sách
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 justify-content-center mt-2">
+    <div class="row">
+      <div class="col-6 ">
+        <a href="${pageContext.request.contextPath}/admin/vip_subs" style="width: 100%">
+          <button class="btn btn-primary btn-block">
+            Nâng cấp vip
+          </button>
+        </a>
+      </div>
+      <div class="col-6 ">
+        <a href="${pageContext.request.contextPath}/admin/late-return" style="width: 100%">
+          <button class="btn btn-primary btn-block">
+            Trả sách trễ
           </button>
         </a>
       </div>

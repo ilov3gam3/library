@@ -6,7 +6,7 @@
 <div class="container ">
     <div class="row col-12">
             <h3>User List</h3>
-            <table class="table table-bordered table-striped col-12" id="table">
+            <table border="1" class="table table-bordered table-striped col-12" id="table">
                 <thead>
                 <tr>
                     <th scope="col">Tên sách</th>

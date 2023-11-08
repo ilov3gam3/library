@@ -51,7 +51,7 @@
             <td>${location.getShelf()}</td>
             <td>
               <a href="${pageContext.request.contextPath}/admin/view-books-in-location?location_id=${location.getId()}">
-                <button class="btn btn-primary">${location.getQuantity()}</button>
+                <button class="btn btn-primary">${location.getQuantity()} (nhấn để xem)</button>
               </a>
             </td>
           </tr>

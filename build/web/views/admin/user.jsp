@@ -204,5 +204,6 @@ function showUpdateModal(id, name, email, phone, avatar, dob, address, gender) {
     } else {
         $("#update_gender_female").attr("selected", true)
     }
+    $("#update_avatar_img").attr("src", avatar.startsWith("http") ? avatar : '${pageContext.request.contextPath}' + avatar)
 }
 </script>

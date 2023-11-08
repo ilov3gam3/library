@@ -29,7 +29,7 @@ public class FavoriteController {
             if (req.getRequestURI().contains("/view-book")){
                 resp.sendRedirect(req.getContextPath() + "/view-book?id=" + book_id);
             } else {
-                resp.sendRedirect(req.getContextPath());
+                resp.sendRedirect(req.getContextPath() + "/");
             }
         }
     }

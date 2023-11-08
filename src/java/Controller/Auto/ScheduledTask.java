@@ -20,8 +20,8 @@ public class ScheduledTask implements ServletContextListener {
     public void contextInitialized(ServletContextEvent event) {
         scheduler = Executors.newSingleThreadScheduledExecutor();
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 18); // Set the hour to 1 AM
-        calendar.set(Calendar.MINUTE, 15);      // Set the minute to 0
+        calendar.set(Calendar.HOUR_OF_DAY, 0); // Set the hour to 1 AM
+        calendar.set(Calendar.MINUTE, 1);      // Set the minute to 0
         calendar.set(Calendar.SECOND, 0);      // Set the second to 0
         Date targetTime = calendar.getTime();
         long initialDelay = targetTime.getTime() - System.currentTimeMillis();

@@ -141,8 +141,8 @@ public class PaymentController {
             String vnp_OrderInfo = req.getParameter("vnp_OrderInfo");
             String vnp_TxnRef = req.getParameter("vnp_TxnRef");
             String sql = "update payments set vnp_BankCode = ?, vnp_TransactionNo = ?, vnp_TransactionStatus = ?, vnp_CardType = ?, vnp_BankTranNo = ?, paid_at = ? where user_id = ? and amount = ? and vnp_TxnRef = ? and vnp_OrderInfo = ?;update users set account_balance = account_balance + ? where id = ?;";
-            String[] vars = new String[]{vnp_BankCode, vnp_TransactionNo, vnp_TransactionStatus, vnp_CardType, vnp_BankTranNo, paid_at, user.id, amount, vnp_TxnRef, vnp_OrderInfo, amount, user.id};
-            user.account_balance = String.valueOf(Integer.parseInt(user.account_balance) + Integer.parseInt(amount));
+            String[] vars = new String[]{vnp_BankCode, vnp_TransactionNo, vnp_TransactionStatus, vnp_CardType, vnp_BankTranNo, paid_at, user.id, amount, vnp_TxnRef, vnp_OrderInfo, vnp_TransactionStatus.equals("00") ? amount : "0", user.id};
+            user.account_balance = vnp_TransactionStatus.equals("00") ? String.valueOf(Integer.parseInt(user.account_balance) + Integer.parseInt(amount)) : user.account_balance;
             req.getSession().setAttribute("login", user);
             boolean check = DB.executeUpdate(sql, vars);
             if (check){
@@ -187,8 +187,48 @@ public class PaymentController {
             String[] fields = new String[]{"id", "user_id", "amount", "vnp_BankCode", "vnp_TransactionNo", "vnp_TransactionStatus", "vnp_OrderInfo", "vnp_TxnRef", "vnp_CardType", "vnp_BankTranNo", "create_order_at", "paid_at", "user_name"};
             ArrayList<MyObject> payments = DB.getData(sql, fields);
             req.setAttribute("payments", payments);
+            int amount = 0;
+            for (int i = 0; i < payments.size(); i++) {
+                amount += Integer.parseInt(payments.get(i).amount);
+            }
+            req.setAttribute("amount", amount);
             req.getRequestDispatcher("/views/admin/payments.jsp").forward(req, resp);
 
+        }
+    }
+
+    @WebServlet("/user/transaction")
+    public static class Transaction extends HttpServlet{
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            MyObject user = (MyObject) req.getSession().getAttribute("login");
+            String sql = "select * from payments where user_id = ?";
+            String[] vars = new String[]{user.id};
+            ArrayList<MyObject> transactions = DB.getData(sql, vars, new String[]{"id", "user_id", "amount", "vnp_BankCode", "vnp_TransactionNo", "vnp_TransactionStatus", "vnp_OrderInfo", "vnp_TxnRef", "vnp_CardType", "vnp_BankTranNo", "create_order_at", "paid_at"});
+            sql = "select rentals.*, books.title as book_title from rentals inner join books on rentals.book_id = books.id where user_id = ?";
+            ArrayList<MyObject> rentals = DB.getData(sql, vars, new String[]{"id", "book_id", "user_id", "from_date", "to_date", "price", "received_book", "returned_book", "created_at", "book_title"});
+            sql = "select * from vip_subscriptions where user_id = ? order by id";
+            ArrayList<MyObject> vip_subs = DB.getData(sql, vars, new String[]{"id", "from_date", "to_date", "price", "discount"});
+            req.setAttribute("transactions", transactions);
+            req.setAttribute("rentals", rentals);
+            req.setAttribute("vip_subs", vip_subs);
+            int tong_nap = 0;
+            for (int i = 0; i < transactions.size(); i++) {
+                tong_nap += Integer.parseInt(transactions.get(i).amount);
+            }
+            int tong_thue = 0;
+            for (int i = 0; i < rentals.size(); i++) {
+                tong_thue += Integer.parseInt(rentals.get(i).price);
+            }
+
+            int tong_nap_vip = 0;
+            for (int i = 0; i < vip_subs.size(); i++) {
+                tong_nap_vip += Integer.parseInt(vip_subs.get(i).price);
+            }
+            req.setAttribute("tong_nap", tong_nap);
+            req.setAttribute("tong_thue", tong_thue);
+            req.setAttribute("tong_nap_vip", tong_nap_vip);
+            req.getRequestDispatcher("/views/user/transaction.jsp").forward(req, resp);
         }
     }
 }

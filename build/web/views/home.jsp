@@ -1236,161 +1236,6 @@
         </div>
     </div>
 </div>
-<%--<div id="row-cbgtkl9u3" class="gdz-row banner-overlay-dark">
-    <div class="container">
-        <div class="row">
-            <div id="column-swsitjal1" class="layout-column col-lg-6 col-md-12 col-12 mb-2 mb-md-0">
-                <div id="addon-ce6c4eqdc" class="addon-box">
-                    <div class="pb-banner">
-                        <a href="#" target="">
-                            <div class="pb-banner-img">
-			<span>
-				<img src="assets/banner-1%20(1).jpg" alt="Image Alt" class="img-responsive"/>
-			</span>
-                            </div>
-                            <div class="pb-banner-text pb-banner-center-left left">
-                                <span class="pb-banner-subtitle">Your Guide To The World</span>            <h5
-                                    class="pb-banner-title">Must-Read <br>Travel Books</h5>
-                                <div class="pb-banner-button btn"><span>Find out more</span><i
-                                        class="icon-long-arrow-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            <div id="column-agi747c3c" class="layout-column col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
-                <div id="addon-9uvpqfyna" class="addon-box">
-                    <div class="pb-banner banner-content-stretch">
-                        <a href="#" target="">
-                            <div class="pb-banner-img">
-			<span>
-				<img src="assets/banner-2%20(1).jpg" alt="Image Alt" class="img-responsive"/>
-			</span>
-                            </div>
-                            <div class="pb-banner-text pb-banner-top-left left">
-                                <span class="pb-banner-subtitle">New This Week</span>            <h5
-                                    class="pb-banner-title">Discover Our <br>Best Romance <br>Books</h5>
-                                <div class="pb-banner-button btn"><span>Discover now</span><i
-                                        class="icon-long-arrow-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            <div id="column-o4xhr90y6" class="layout-column col-lg-3 col-md-6 col-12 ">
-                <div id="addon-77nx3txla" class="addon-box">
-                    <div class="pb-banner">
-                        <a href="#" target="">
-                            <div class="pb-banner-img">
-			<span>
-				<img src="assets/banner-3.jpg" alt="Image Alt" class="img-responsive"/>
-			</span>
-                            </div>
-                            <div class="pb-banner-text pb-banner-center-left left">
-                                <span class="pb-banner-subtitle">Deal Of The Day</span>            <h5
-                                    class="pb-banner-title">20% Off Use <br>Code: <span>mybook</span></h5>
-                                <div class="pb-banner-button btn"><span>Shop now</span><i
-                                        class="icon-long-arrow-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-                <div id="addon-kknbu0r4f" class="addon-box">
-                    <div class="pb-spacer">
-                        <div class="pb-spacer-inner"></div>
-                    </div>
-                </div>
-                <div id="addon-9hybhk8fh" class="addon-box">
-                    <div class="pb-banner">
-                        <a href="#" target="">
-                            <div class="pb-banner-img">
-			<span>
-				<img src="assets/banner-4.jpg" alt="Image Alt" class="img-responsive"/>
-			</span>
-                            </div>
-                            <div class="pb-banner-text pb-banner-center-left left">
-                                <span class="pb-banner-subtitle">New Arrivals</span>            <h5
-                                    class="pb-banner-title">Business <br> Economics</h5>
-                                <div class="pb-banner-button btn"><span>Discover now</span><i
-                                        class="icon-long-arrow-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>--%>
-<%--<div id="row-6lllqhkxu" class="gdz-row ">
-    <div class="container">
-        <div class="row">
-            <div id="column-4lfbrt40h" class="layout-column col-lg-3 col-md-6 col-12 ">
-                <div id="addon-5rhyxkq7p" class="addon-box">
-                    <div class="pb-service-box">
-                        <div class="pb-service-icon">
-                            <i class="icon-truck"></i>
-                        </div>
-                        <div class="pb-service-content">
-                            <h5 class="pb-service-title">Payment & Delivery</h5>
-                            <div class="pb-service-description">
-                                <p>Free shipping for orders over $50</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="column-2y1kdp964" class="layout-column col-lg-3 col-md-6 col-12 ">
-                <div id="addon-rrcffktlp" class="addon-box">
-                    <div class="pb-service-box">
-                        <div class="pb-service-icon">
-                            <i class="icon-rotate-left"></i>
-                        </div>
-                        <div class="pb-service-content">
-                            <h5 class="pb-service-title">Return & Refund</h5>
-                            <div class="pb-service-description">
-                                <p>Free 100% money back guarantee</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="column-rma1buzfv" class="layout-column col-lg-3 col-md-6 col-12 ">
-                <div id="addon-i5j08rk6d" class="addon-box">
-                    <div class="pb-service-box">
-                        <div class="pb-service-icon">
-                            <i class="icon-life-ring"></i>
-                        </div>
-                        <div class="pb-service-content">
-                            <h5 class="pb-service-title">Quality Support</h5>
-                            <div class="pb-service-description">
-                                <p>Alway online feedback 24/7</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="column-acjkqul12" class="layout-column col-lg-3 col-md-6 col-12 ">
-                <div id="addon-381rl0da0" class="addon-box">
-                    <div class="pb-service-box">
-                        <div class="pb-service-icon">
-                            <i class="icon-envelope"></i>
-                        </div>
-                        <div class="pb-service-content">
-                            <h5 class="pb-service-title">Join Our Newsletter</h5>
-                            <div class="pb-service-description">
-                                <p>10% off by subscribing to our newsletter</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>--%>
 <div id="row-dlwmhtm0z" class="gdz-row productbox-carousel best-seller">
     <div class="container">
         <div class="row">
@@ -1405,7 +1250,7 @@
                 <div id="addon-xaqeprna0" class="addon-box">
                     <div class="pb-button pb-button-right">
                         <a class=" btn btn-sm btn-link btn-right"
-                           href="index.php?id_category=54&controller=category&id_lang=1" target="">
+                           href="${pageContext.request.contextPath}/search?keyword=" target="">
                             <span>Xem tất cả sách </span>
                             <i class="icon-long-arrow-right"></i>
                         </a>
@@ -1418,7 +1263,7 @@
                         <div class="filter-products owl-carousel customs" data-items="5" data-lg="5" data-md="5"
                              data-sm="3" data-xs="2" data-nav="false" data-dots="true" data-auto="false"
                              data-rewind="false" data-slidebypage="1" data-margin="20">
-                                <% ArrayList<MyObject> books = DB.getData("select books.*, authors.name as author_name, genre.name as genre_name from books inner join authors on books.author_id = authors.id inner join genre on books.genre_id = genre.id", new String[]{"id", "title", "description", "author_id", "genre_id", "quantity", "cover_image","price", "soft_file", "available", "author_name", "genre_name", "year"}); %>
+                                <% ArrayList<MyObject> books = DB.getData("select top 10 books.*, authors.name as author_name, genre.name as genre_name from books inner join authors on books.author_id = authors.id inner join genre on books.genre_id = genre.id order by id desc", new String[]{"id", "title", "description", "author_id", "genre_id", "quantity", "cover_image","price", "soft_file", "available", "author_name", "genre_name", "year", "renting"}); %>
                                 <% for (int i = 0; i < books.size(); i++) {%>
                                         <div class="item">
                                 <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
@@ -1429,16 +1274,13 @@
                                                  data-src="${pageContext.request.contextPath}<%= books.get(i).cover_image %>"
                                                  src="${pageContext.request.contextPath}<%= books.get(i).cover_image %>"
                                                  alt="<%= books.get(i).title %>"
-                                                 title="<%= books.get(i).title %>"
+                                                 title="<%= books.get(i).description %>"
                                                  style="width: 100%; height: 100%; object-fit: contain;"
                                             />
                                     </div>
                                     <div class="product-info">
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '129', false, 1); return false;"
-                                           data-id-product="129"></a>
                                         <a class="category-name"
-                                           href="${pageContext.request.contextPath}/view-author?id=<%=books.get(i).id%>">
+                                           href="${pageContext.request.contextPath}/view-author?id=<%=books.get(i).author_id%>">
                                             by
                                             <span><%=books.get(i).author_name%></span>
                                         </a>
@@ -1454,6 +1296,9 @@
                                                giá thuê 1 ngày <%=books.get(i).getPrice()%>
                                             </span>
                                         </div>
+                                        <div class="text-danger">
+                                            đang thuê <%=books.get(i).renting%>/<%=books.get(i).quantity%>
+                                        </div>
                                         <div class="product-short-desc">
                                             <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
                                                 luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
@@ -1462,7 +1307,15 @@
                                         <div class="product-footer">
                                             <% if (user != null) {%>
                                             <div class="product-action">
-                                                <button data-toggle="modal" data-target="#rentModal" onclick="showRentModal('<%=books.get(i).getId()%>', '<%=books.get(i).getTitle()%>', '<%=books.get(i).getCover_image()%>', '<%=books.get(i).getPrice()%>')" class="btn btn-outline-warning btn-block mb-1"><i class="fa fa-money" aria-hidden="true"></i>Thuê ngay</button>
+                                                <% if (Integer.parseInt(books.get(i).renting) >= Integer.parseInt(books.get(i).quantity)) {%>
+                                                    <button class="btn btn-outline-warning btn-block mb-1" onclick="toastr.warning('Không đủ số lượng sách trong kho.')">Thuê ngay</button>
+                                                <% } else {%>
+                                                    <% if (user.vip_sub_id != null) {%>
+                                                        <button data-toggle="modal" data-target="#rentVipModal" onclick="showRentVipModal('<%=books.get(i).getId()%>', '<%=books.get(i).getTitle()%>', '<%=books.get(i).getCover_image()%>')" class="btn btn-outline-warning btn-block mb-1"><i class="fa fa-money" aria-hidden="true"></i>Thuê ngay</button>
+                                                    <% } else {%>
+                                                        <button data-toggle="modal" data-target="#rentModal" onclick="showRentModal('<%=books.get(i).getId()%>', '<%=books.get(i).getTitle()%>', '<%=books.get(i).getCover_image()%>', '<%=books.get(i).getPrice()%>')" class="btn btn-outline-warning btn-block mb-1"><i class="fa fa-money" aria-hidden="true"></i>Thuê ngay</button>
+                                                    <%}%>
+                                                <% } %>
                                             </div>
                                             <div class="product-action">
                                                 <button onclick="showFavorModal('<%=books.get(i).getId()%>', '<%=books.get(i).getTitle()%>', '<%=books.get(i).getCover_image()%>')" data-toggle="modal" data-target="#addFavoriteModal" class="btn btn-outline-success btn-block"><i class="fa fa-heart-o" aria-hidden="true"></i>Thêm vào yêu thích</button>
@@ -1487,533 +1340,13 @@
         </div>
     </div>
 </div>
-<div id="row-ugg1c8gdt" class="gdz-row ">
-    <div class="container">
-        <div class="row">
-            <div id="column-c4o9841vm" class="layout-column col-lg-9 col-md-12 col-12 ">
-                <div id="addon-o5c1kd3vz" class="addon-box">
-                    <h5 class="pb-heading title text-lg-left">
-                        New Releases
-                    </h5>
-                </div>
-            </div>
-            <div id="column-i8r6yjj6q" class="layout-column col-lg-3 col-md-12 col-12 ">
-                <div id="addon-mmnhodn91" class="addon-box">
-                    <div class="pb-button pb-button-right">
-                        <a class=" btn btn-sm btn-link btn-right"
-                           href="index.php?id_category=54&controller=category&id_lang=1" target="">
-                            <span>View more Products </span>
-                            <i class="icon-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div id="column-ta7172iga" class="layout-column col-lg-4 col-md-6 col-12 banner_carousel">
-                <div id="addon-5ivxb0q7f" class="addon-box">
-                    <div class="pb-image-carousel">
-                        <div class="image-carousel owl-carousel" data-items="1" data-lg="1" data-md="1" data-sm="1"
-                             data-xs="1" data-nav="false" data-dots="true" data-auto="false" data-rewind="false"
-                             data-slidebypage="1" data-margin="0">
-                            <div class="image-item">
-                                <a href="#" alt="Image Alt">
-                                    <img src="../assets/banner-9.jpg"/>
-                                </a>
-                            </div>
-                            <div class="image-item">
-                                <a href="#" alt="Image Alt">
-                                    <img src="../assets/banner-10.jpg"/>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="column-48puem1g8" class="layout-column col-lg-8 col-md-6 col-12 product_carousel">
-                <div id="addon-uwv1niuuw" class="addon-box">
-                    <div class="pb-filter-products">
-                        <div class="filter-products owl-carousel customs" data-items="4" data-lg="4" data-md="4"
-                             data-sm="3" data-xs="2" data-nav="false" data-dots="false" data-auto="false"
-                             data-rewind="false" data-slidebypage="1" data-margin="20">
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="143" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=143&amp;rewrite=this-is-going-to-hurt-secret-diaries-of-a-juni&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/6/0/9/609-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/6/0/9/609-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="This is Going to Hurt: Secret Diaries of a Juni"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/6/0/9/609-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '143', false, 1); return false;"
-                                           data-id-product="143"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=61&controller=category&id_lang=1">
-                                            by
-                                            <span>John Gray</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=143&amp;rewrite=this-is-going-to-hurt-secret-diaries-of-a-juni&amp;controller=product&amp;id_lang=1">This
-                                            is Going to Hurt: Secret...</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$12.00
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="143"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="143" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '143', false, 1); return false;"
-                                               data-id-product="143">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$12.00</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="143" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="142" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=142&amp;rewrite=moneyland-why-thieves-and-crooks-now-rule-&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/6/0/7/607-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/6/0/7/607-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="Moneyland: Why Thieves And Crooks Now Rule ..."
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/6/0/7/607-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '142', false, 1); return false;"
-                                           data-id-product="142"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=61&controller=category&id_lang=1">
-                                            by
-                                            <span>John Gray</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=142&amp;rewrite=moneyland-why-thieves-and-crooks-now-rule-&amp;controller=product&amp;id_lang=1">Moneyland:
-                                            Why Thieves And...</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$12.99
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="142"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="142" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '142', false, 1); return false;"
-                                               data-id-product="142">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$12.99</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="142" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="141" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=141&amp;rewrite=the-librarian-of-auschwitz&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/6/0/5/605-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/6/0/5/605-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="The Librarian of Auschwitz"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/6/0/5/605-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '141', false, 1); return false;"
-                                           data-id-product="141"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=61&controller=category&id_lang=1">
-                                            by
-                                            <span>John Gray</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=141&amp;rewrite=the-librarian-of-auschwitz&amp;controller=product&amp;id_lang=1">The
-                                            Librarian of Auschwitz</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$10.99
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="141"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="141" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '141', false, 1); return false;"
-                                               data-id-product="141">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$10.99</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="141" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="140" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=140&amp;rewrite=you-got-this&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/6/0/3/603-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/6/0/3/603-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="You Got This"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/6/0/3/603-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '140', false, 1); return false;"
-                                           data-id-product="140"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=61&controller=category&id_lang=1">
-                                            by
-                                            <span>John Gray</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=140&amp;rewrite=you-got-this&amp;controller=product&amp;id_lang=1">You
-                                            Got This</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$7.99
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="140"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="140" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '140', false, 1); return false;"
-                                               data-id-product="140">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$7.99</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="140" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="row-h8x1776es" class="gdz-row banner-group banner-overlay-dark">
-    <div class="container">
-        <div class="row">
-            <div id="column-sru36d93w" class="layout-column col-lg-4 col-md-6 col-12 mb-2 mb-lg-0">
-                <div id="addon-v0za8537a" class="addon-box">
-                    <div class="pb-banner">
-                        <a href="#" target="">
-                            <div class="pb-banner-img">
-			<span>
-				<img src="../assets/banner-6.jpg" alt="Image Alt" class="img-responsive"/>
-			</span>
-                            </div>
-                            <div class="pb-banner-text pb-banner-center-left left">
-                                <span class="pb-banner-subtitle">A Perfect Choice For Your Children</span>
-                                <h5 class="pb-banner-title">Children's <br>Bestselling Books</h5>
-                                <div class="pb-banner-button btn"><span>Discover now</span><i
-                                        class="icon-long-arrow-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            <div id="column-95xbvfte1" class="layout-column col-lg-4 col-md-6 col-12 mb-2 mb-lg-0">
-                <div id="addon-zodu7zusf" class="addon-box">
-                    <div class="pb-banner">
-                        <a href="#" target="">
-                            <div class="pb-banner-img">
-			<span>
-				<img src="../assets/banner-7.jpg" alt="Image Alt" class="img-responsive"/>
-			</span>
-                            </div>
-                            <div class="pb-banner-text pb-banner-center-left left">
-                                <span class="pb-banner-subtitle">Mental Health Awareness Week</span>            <h5
-                                    class="pb-banner-title">Self-Help For <br>Your Future.</h5>
-                                <div class="pb-banner-button btn"><span>Discover now</span><i
-                                        class="icon-long-arrow-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            <div id="column-t4wjn72kp" class="layout-column col-lg-4 col-md-6 col-12 ">
-                <div id="addon-d632qyolq" class="addon-box">
-                    <div class="pb-banner">
-                        <a href="#" target="">
-                            <div class="pb-banner-img">
-			<span>
-				<img src="../assets/banner-8.jpg" alt="Image Alt" class="img-responsive"/>
-			</span>
-                            </div>
-                            <div class="pb-banner-text pb-banner-center-left left">
-                                <span class="pb-banner-subtitle">New York Times Bestsellers</span>            <h5
-                                    class="pb-banner-title">Bestselling Food <br>and Drink Books.</h5>
-                                <div class="pb-banner-button btn"><span>Discover now</span><i
-                                        class="icon-long-arrow-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div id="row-obh9n1ceb" class="gdz-row productbox-carousel">
     <div class="container">
         <div class="row">
             <div id="column-a38iynsuw" class="layout-column col-lg-9 col-md-12 col-12 ">
                 <div id="addon-sh8v9eurj" class="addon-box">
                     <h5 class="pb-heading title text-lg-left">
-                        Picks From Our Experts
+                        Sách được mượn nhiều nhất.
                     </h5>
                 </div>
             </div>
@@ -2021,826 +1354,98 @@
                 <div id="addon-m2kbt3w0v" class="addon-box">
                     <div class="pb-button pb-button-right">
                         <a class=" btn btn-sm btn-link btn-right"
-                           href="index.php?id_category=54&controller=category&id_lang=1" target="">
-                            <span>View more Products </span>
+                           href="${pageContext.request.contextPath}/search?keyword=" target="">
+                            <span>Xem tất cả sách</span>
                             <i class="icon-long-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            <div id="column-mdcq0qomx" class="layout-column col-lg-12 col-md-12 col-12 ">
+            <% ArrayList<MyObject> books_most_renting = DB.getData("select books.*, authors.name as author_name, genre.name as genre_name, count(rentals.id) as number_borrow from books inner join authors on books.author_id = authors.id inner join genre on books.genre_id = genre.id inner join rentals on books.id = rentals.book_id group by genre.name, authors.name, books.id, title, books.description, author_id, genre_id, quantity, renting, books.price, cover_image, soft_file, available, location_id, year order by number_borrow", new String[]{"id", "title", "description", "author_id", "genre_id", "quantity", "cover_image","price", "soft_file", "available", "author_name", "genre_name", "year", "renting", "number_borrow"}); %>
+            <% if (books_most_renting.size() != 0){%>
+                <div id="column-mdcq0qomx" class="layout-column col-lg-12 col-md-12 col-12 ">
                 <div id="addon-64c94fifg" class="addon-box">
                     <div class="pb-filter-products">
-                        <div class="filter-products owl-carousel customs" data-items="6" data-lg="6" data-md="6"
-                             data-sm="3" data-xs="2" data-nav="false" data-dots="false" data-auto="false"
+                        <div class="filter-products owl-carousel customs" data-items="5" data-lg="5" data-md="5"
+                             data-sm="3" data-xs="2" data-nav="false" data-dots="true" data-auto="false"
                              data-rewind="false" data-slidebypage="1" data-margin="20">
+                            <% for (int i = 0; i < books_most_renting.size(); i++) {%>
                             <div class="item">
                                 <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
                                      data-id-product="129" data-id-product-attribute="0" itemscope
                                      itemtype="http://schema.org/Product">
                                     <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=129&amp;rewrite=becoming&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/5/8/1/581-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/5/8/1/581-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="Becoming"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/5/8/1/581-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                            <li class="product-flag on-sale">On sale</li>
-                                            <li class="product-flag discount">-5%</li>
-                                        </ul>
-
+                                        <img class="img-responsive product-img1"
+                                             data-src="${pageContext.request.contextPath}<%= books_most_renting.get(i).cover_image %>"
+                                             src="${pageContext.request.contextPath}<%= books_most_renting.get(i).cover_image %>"
+                                             alt="<%= books_most_renting.get(i).title %>"
+                                             title="<%= books_most_renting.get(i).description %>"
+                                             style="width: 100%; height: 100%; object-fit: contain;"
+                                        />
                                     </div>
                                     <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '129', false, 1); return false;"
-                                           data-id-product="129"></a>
                                         <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=55&controller=category&id_lang=1">
+                                           href="${pageContext.request.contextPath}/view-author?id=<%=books_most_renting.get(i).author_id%>">
                                             by
-                                            <span>Michelle Obama</span>
+                                            <span><%=books_most_renting.get(i).author_name%></span>
                                         </a>
 
                                         <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=129&amp;rewrite=becoming&amp;controller=product&amp;id_lang=1">Becoming</a>
+                                                                                     href="${pageContext.request.contextPath}/view-book?id=<%=books_most_renting.get(i).id%>"><%= books_most_renting.get(i).title %></a>
                                         </h3>
 
 
                                         <div class="content_price">
 
-						<span class="price new has-discount">
-							$30.88
-						</span>
-
-                                            <span class="old price">Was $32.50</span>
-
-
+                                            <span class="price new has-discount">
+                                               giá thuê 1 ngày <%=books_most_renting.get(i).getPrice()%>
+                                            </span>
                                         </div>
-
+                                        <div class="text-danger">
+                                            đang thuê: <%=books_most_renting.get(i).renting%>/<%=books_most_renting.get(i).quantity%>
+                                        </div>
+                                        <div class="text-danger">
+                                            tổng số lần thuê: <%=books_most_renting.get(i).number_borrow%>
+                                        </div>
                                         <div class="product-short-desc">
                                             <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
                                                 luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
                                                 Sed lectus.</p>
                                         </div>
                                         <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="129"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
+                                            <% if (user != null) {%>
                                             <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="129" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
+                                                <% if (Integer.parseInt(books_most_renting.get(i).renting) >= Integer.parseInt(books_most_renting.get(i).quantity)) {%>
+                                                <button class="btn btn-outline-warning btn-block mb-1" onclick="toastr.warning('Không đủ số lượng sách trong kho.')">Thuê ngay</button>
+                                                <% } else {%>
+                                                    <% if (user.vip_sub_id != null) {%>
+                                                        <button data-toggle="modal" data-target="#rentVipModal" onclick="showRentVipModal('<%=books_most_renting.get(i).getId()%>', '<%=books_most_renting.get(i).getTitle()%>', '<%=books_most_renting.get(i).getCover_image()%>')" class="btn btn-outline-warning btn-block mb-1"><i class="fa fa-money" aria-hidden="true"></i>Thuê ngay</button>
+                                                    <% } else {%>
+                                                        <button data-toggle="modal" data-target="#rentModal" onclick="showRentModal('<%=books_most_renting.get(i).getId()%>', '<%=books_most_renting.get(i).getTitle()%>', '<%=books_most_renting.get(i).getCover_image()%>', '<%=books_most_renting.get(i).getPrice()%>')" class="btn btn-outline-warning btn-block mb-1"><i class="fa fa-money" aria-hidden="true"></i>Thuê ngay</button>
+                                                    <%}%>
+                                                <% } %>
                                             </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '129', false, 1); return false;"
-                                               data-id-product="129">
-                                                <span>Add to Wishlist</span>
-                                            </a>
+                                            <div class="product-action">
+                                                <button onclick="showFavorModal('<%=books_most_renting.get(i).getId()%>', '<%=books_most_renting.get(i).getTitle()%>', '<%=books_most_renting.get(i).getCover_image()%>')" data-toggle="modal" data-target="#addFavoriteModal" class="btn btn-outline-success btn-block"><i class="fa fa-heart-o" aria-hidden="true"></i>Thêm vào yêu thích</button>
+                                            </div>
+                                            <%} else {%>
+                                            <div class="product-action">
+                                                <button onclick="toastr_login()" class="btn btn-outline-warning btn-block mb-1"><i class="fa fa-money" aria-hidden="true"></i>Thuê ngay</button>
+                                            </div>
+                                            <div class="product-action">
+                                                <button onclick="toastr_login()" class="btn btn-outline-success btn-block"><i class="fa fa-heart-o" aria-hidden="true"></i>Thêm vào yêu thích</button>
+                                            </div>
+                                            <%}%>
                                         </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new has-discount">$30.88</span>
-
-                                            <span class="old price">$32.50</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="129" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="130" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=130&amp;rewrite=the-secret-barrister-stories-of-the-law-and-how-it-s-&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/5/8/3/583-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/5/8/3/583-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="The Secret Barrister: Stories of the Law and How It&#039;s ..."
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/5/8/3/583-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '130', false, 1); return false;"
-                                           data-id-product="130"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=56&controller=category&id_lang=1">
-                                            by
-                                            <span>Jordan B. Peterson</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=130&amp;rewrite=the-secret-barrister-stories-of-the-law-and-how-it-s-&amp;controller=product&amp;id_lang=1">The
-                                            Secret Barrister: Stories of...</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$17.34
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="130"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="130" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '130', false, 1); return false;"
-                                               data-id-product="130">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$17.34</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="130" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="131" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=131&amp;rewrite=five-feet-apart&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/5/8/5/585-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/5/8/5/585-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="Five Feet Apart"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/5/8/5/585-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                            <li class="product-flag on-sale">On sale</li>
-                                            <li class="product-flag discount">-10%</li>
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '131', false, 1); return false;"
-                                           data-id-product="131"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=58&controller=category&id_lang=1">
-                                            by
-                                            <span>Rachael Lippincott</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=131&amp;rewrite=five-feet-apart&amp;controller=product&amp;id_lang=1">Five
-                                            Feet Apart</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new has-discount">
-							$17.09
-						</span>
-
-                                            <span class="old price">Was $18.99</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="131"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="131" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '131', false, 1); return false;"
-                                               data-id-product="131">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new has-discount">$17.09</span>
-
-                                            <span class="old price">$18.99</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="131" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="132" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=132&amp;rewrite=one-of-us-is-lying&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/5/8/7/587-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/5/8/7/587-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="One of Us Is Lying"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/5/8/7/587-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '132', false, 1); return false;"
-                                           data-id-product="132"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=59&controller=category&id_lang=1">
-                                            by
-                                            <span>Karen M. McManus</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=132&amp;rewrite=one-of-us-is-lying&amp;controller=product&amp;id_lang=1">One
-                                            of Us Is Lying</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$17.99
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="132"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="132" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '132', false, 1); return false;"
-                                               data-id-product="132">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$17.99</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="132" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="133" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=133&amp;rewrite=how-to-stop-time&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/5/8/9/589-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/5/8/9/589-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="How to Stop Time"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/5/8/9/589-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '133', false, 1); return false;"
-                                           data-id-product="133"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=60&controller=category&id_lang=1">
-                                            by
-                                            <span>Matt Haig</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=133&amp;rewrite=how-to-stop-time&amp;controller=product&amp;id_lang=1">How
-                                            to Stop Time</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$11.68
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="133"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="133" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '133', false, 1); return false;"
-                                               data-id-product="133">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$11.68</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="133" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="item">
-                                <div class="product-miniature js-product-miniature thumbnail-container productbox-12 customs"
-                                     data-id-product="134" data-id-product-attribute="0" itemscope
-                                     itemtype="http://schema.org/Product">
-                                    <div class="product-preview">
-
-                                        <a href="https://prestashop17.joommasters.com/molla/index.php?id_product=134&amp;rewrite=the-durrells-of-corfu-exclusive-edition&amp;controller=product&amp;id_lang=1"
-                                           class="product-image blur-image">
-                                            <img class="img-responsive product-img1"
-                                                 data-src="https://prestashop17.joommasters.com/molla/img/p/5/9/1/591-home_default_200x310.jpg"
-                                                 src="https://prestashop17.joommasters.com/molla/img/p/5/9/1/591-home_default_200x310.jpg"
-                                                 alt=""
-                                                 title="The Durrells of Corfu: Exclusive Edition"
-                                                 data-full-size-image-url="https://prestashop17.joommasters.com/molla/img/p/5/9/1/591-large_default.jpg"
-                                            />
-                                        </a>
-
-
-                                        <ul class="product-flags">
-                                        </ul>
-
-                                    </div>
-                                    <div class="product-info">
-
-                                        <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                           onclick="WishlistCart('wishlist_block_list', 'add', '134', false, 1); return false;"
-                                           data-id-product="134"></a>
-                                        <a class="category-name"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?id_category=61&controller=category&id_lang=1">
-                                            by
-                                            <span>John Gray</span>
-                                        </a>
-
-                                        <h3 class="product-title" itemprop="name"><a class="product-link"
-                                                                                     href="https://prestashop17.joommasters.com/molla/index.php?id_product=134&amp;rewrite=the-durrells-of-corfu-exclusive-edition&amp;controller=product&amp;id_lang=1">The
-                                            Durrells of Corfu: Exclusive...</a></h3>
-
-
-                                        <div class="content_price">
-
-						<span class="price new ">
-							$24.48
-						</span>
-
-
-                                        </div>
-
-                                        <div class="product-short-desc">
-                                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae
-                                                luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing.
-                                                Sed lectus.</p>
-                                        </div>
-                                        <div class="product-footer">
-
-                                            <div id="review">
-                                                <div class="product-list-reviews no-review" data-id="134"
-                                                     data-url="https://prestashop17.joommasters.com/molla/index.php?fc=module&module=productcomments&controller=CommentGrade&id_lang=1">
-                                                    <div class="grade-stars small-stars"></div>
-                                                    <div class="comments-nb ratings-text"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="product-action">
-                                                <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                                   title="Add to cart" data-id-product="134" data-minimal-quantity="1"
-                                                   data-token="588a5a1eb02312add78ccb857e952842">
-                                                    <span>Add to cart</span>
-                                                </a>
-                                            </div>
-
-                                            <a href="#" class="addToWishlist btn-icon" title="Add to Wishlist"
-                                               onclick="WishlistCart('wishlist_block_list', 'add', '134', false, 1); return false;"
-                                               data-id-product="134">
-                                                <span>Add to Wishlist</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="product-actions">
-
-                                        <div class="content_price">
-
-                                            <span class="price new ">$24.48</span>
-
-
-                                        </div>
-
-                                        <a href="#" data-link-action="quickview" title="Quick View"
-                                           class="btn-icon quick-view">
-                                            <span>Quick View</span>
-                                        </a>
-                                        <a href="#" class="ajax-add-to-cart product-btn  cart-button btn-icon"
-                                           title="Add to cart" data-id-product="134" data-minimal-quantity="1"
-                                           data-token="588a5a1eb02312add78ccb857e952842">
-                                            <span>Add to cart</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
+                            <% } %>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<div id="row-x91ezwue6" class="gdz-row ">
-    <div class="container">
-        <div class="row">
-            <div id="column-kvq8yps29" class="layout-column col-lg-12 col-md-12 col-12 ">
-                <div id="addon-lslgvhxfs" class="addon-box">
-                    <h5 class="pb-heading title text-lg-left">
-                        From Our Blog
-                    </h5>
-                </div>
-            </div>
-            <div id="column-euwx3z980" class="layout-column col-lg-12 col-md-12 col-12 ">
-                <div id="addon-phs3konnj" class="addon-box">
-                    <div class="pb-blog">
-                        <div class="blog-carousel owl-carousel carousel-with-shadow" data-items="4" data-lg="4"
-                             data-md="4" data-sm="3" data-xs="1" data-nav="false" data-dots="false" data-auto="false"
-                             data-rewind="false" data-slidebypage="1" data-margin="20">
-                            <div class="item">
-                                <div class="blog-item">
-                                    <div class="post-thumb">
-                                        <a href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=20&amp;controller=post&amp;id_lang=1">
-                                            <img src="https://prestashop17.joommasters.com/molla/modules/gdz_blog/views/img/thumb_fec757e1f27303999d076da80097ff0c.jpg"
-                                                 alt="Aenean dignissim pellentesque felis." class="img-responsive"/>
-                                        </a>
-                                    </div>
-                                    <div class="entry-body">
-                                        <ul class="post-meta">
-                                            <li class="post-created">
-                                                Oct 21, 2020
-                                            </li>
-                                            <li class="post-comments">0 Comment</li>
-                                        </ul>
-                                        <a class="post-title"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=20&amp;controller=post&amp;id_lang=1">Aenean
-                                            dignissim pellentesque felis.</a>
-                                        <div class="post-intro"><p>Morbi in sem quis dui placerat ornare. Pellentesque
-                                            odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.</p></div>
-                                        <a class="post-readmore"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=20&amp;controller=post&amp;id_lang=1">
-                                            <span>Continue Read ...</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="blog-item">
-                                    <div class="post-thumb">
-                                        <a href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=21&amp;controller=post&amp;id_lang=1">
-                                            <img src="https://prestashop17.joommasters.com/molla/modules/gdz_blog/views/img/thumb_961394a467ffdfba809898b65658f1c0.jpg"
-                                                 alt="Donec nec justo eget felis facilisis fermentum."
-                                                 class="img-responsive"/>
-                                        </a>
-                                    </div>
-                                    <div class="entry-body">
-                                        <ul class="post-meta">
-                                            <li class="post-created">
-                                                Oct 21, 2020
-                                            </li>
-                                            <li class="post-comments">0 Comment</li>
-                                        </ul>
-                                        <a class="post-title"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=21&amp;controller=post&amp;id_lang=1">Donec
-                                            nec justo eget felis facilisis fermentum.</a>
-                                        <div class="post-intro"><p>Donec odio. Quisque volutpat mattis eros. Nullam
-                                            malesuada erat ut Suspendisse urna nibh, viverra non, semper suscipit.</p>
-                                        </div>
-                                        <a class="post-readmore"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=21&amp;controller=post&amp;id_lang=1">
-                                            <span>Continue Read ...</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="blog-item">
-                                    <div class="post-thumb">
-                                        <a href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=22&amp;controller=post&amp;id_lang=1">
-                                            <img src="https://prestashop17.joommasters.com/molla/modules/gdz_blog/views/img/thumb_8bcce59b927f7d26bb935fce60265760.jpg"
-                                                 alt="Aliquam porttitor mauris sit." class="img-responsive"/>
-                                        </a>
-                                    </div>
-                                    <div class="entry-body">
-                                        <ul class="post-meta">
-                                            <li class="post-created">
-                                                Oct 21, 2020
-                                            </li>
-                                            <li class="post-comments">0 Comment</li>
-                                        </ul>
-                                        <a class="post-title"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=22&amp;controller=post&amp;id_lang=1">Aliquam
-                                            porttitor mauris sit.</a>
-                                        <div class="post-intro"><p>Suspendisse urna nibh, viverra semper suscipit.
-                                            posuere a, pede. Morbi in sem quis dui placerat ornare.</p></div>
-                                        <a class="post-readmore"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=22&amp;controller=post&amp;id_lang=1">
-                                            <span>Continue Read ...</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="blog-item">
-                                    <div class="post-thumb">
-                                        <a href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=23&amp;controller=post&amp;id_lang=1">
-                                            <img src="https://prestashop17.joommasters.com/molla/modules/gdz_blog/views/img/thumb_11f329d43ca9496ce2ce7503c43a001d.jpg"
-                                                 alt="Integer vitae libero ac risus egestas placerat."
-                                                 class="img-responsive"/>
-                                        </a>
-                                    </div>
-                                    <div class="entry-body">
-                                        <ul class="post-meta">
-                                            <li class="post-created">
-                                                Oct 21, 2020
-                                            </li>
-                                            <li class="post-comments">0 Comment</li>
-                                        </ul>
-                                        <a class="post-title"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=23&amp;controller=post&amp;id_lang=1">Integer
-                                            vitae libero ac risus egestas placerat.</a>
-                                        <div class="post-intro"><p>Lorem ipsum dolor sit amet, consecte tuer adipiscing
-                                            elit. Donec odio. Quisque volutpat mattis eros.</p></div>
-                                        <a class="post-readmore"
-                                           href="/home.jsp/prestashop17.joommasters.com/molla/index.php?fc=module&amp;module=gdz_blog&amp;category_slug=books&amp;post_id=23&amp;controller=post&amp;id_lang=1">
-                                            <span>Continue Read ...</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="row-t1roqf33w" class="gdz-row h20-newsletter">
-    <div class="container">
-        <div class="row">
-            <div id="column-hgqhnftfg" class="layout-column col-lg-12 col-md-12 col-12 ">
-                <div id="addon-th0cj01jl" class="addon-box">
-                    <div class="gdz-icon-box">
-                        <i class="icon-envelope"></i>
-                    </div>
-                </div>
-            </div>
-            <div id="column-5xgr5me01" class="layout-column col-lg-12 col-md-12 col-12 ">
-                <div id="addon-srnbead6v" class="addon-box">
-                    <h5 class="pb-heading title">
-                        Subscribe for Our Newsletter
-                    </h5>
-                </div>
-            </div>
-            <div id="column-rv50wu6id" class="layout-column col-lg-12 col-md-12 col-12 ">
-                <div id="addon-dnvw91jnk" class="addon-box">
-                    <div class="pb-text-content"><p>Learn about new offers and get more deals by joining our
-                        newsletter</p></div>
-                </div>
-            </div>
-            <div id="column-yfhwli0z7" class="layout-column col-lg-12 col-md-12 col-12 ">
-                <div id="addon-uv4dskssh" class="addon-box">
-                    <div class="pb-module">
-                        <div class="email_subscription block block_newsletter">
-                            <h2 class="widget-title">Sign up for email & get 25% off</h2>
-                            <p class="widget-desc">Subcribe to get information about products and coupons</p>
-                            <div class="block-content">
-                                <form action="https://prestashop17.joommasters.com/molla/index.php" method="post">
-                                    <div class="input-group newsletter-input-group">
-                                        <input type="text" name="email" value="" required class="form-control"
-                                               placeholder="Your Email Address"/>
-                                        <button type="submit" class="btn btn-popup newsletter-button align-items-center"
-                                                name="submitNewsletter">
-                                            Go
-                                        </button>
-                                        <button class="btn btn-primary btn-submit" type="submit" id="newsletter-btn"
-                                                name="submitNewsletter">
-                                            <span>Subscribe</span>
-                                            <i class="icon-long-arrow-right"></i>
-                                        </button>
-                                    </div>
-
-                                    <input type="hidden" name="action" value="0"/>
-                                </form>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
+            <%}%>
         </div>
     </div>
 </div>
@@ -2906,7 +1511,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="${pageContext.request.contextPath}/user/rent-book" method="post">
+                <% if (user != null){%>
+                    <% if (user.vip_sub_id != null){%>
+                    <form action="${pageContext.request.contextPath}/vip/rent-book" method="post">
+                            <%} else {%>
+                        <form action="${pageContext.request.contextPath}/user/rent-book" method="post">
+                            <%}%>
+                <%}%>
                     <div class="container">
                         <input type="hidden" id="book_id_rent" name="book_id">
                         <div class="form-group row align-items-center ">
@@ -2959,9 +1570,71 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="rentVipModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thuê sách dành cho tài khoản vip</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="${pageContext.request.contextPath}/vip/rent-book" method="post">
+                    <div class="container">
+                        <input type="hidden" name="book_id" id="vip_book_id" >
+                        <div class="form-group row align-items-center ">
+                            <label class="col-md-12 form-control-label required">
+                                Tên sách bạn sẽ thuê </label>
+                            <div class="col-md-12">
+                                <input class="form-control" id="vip_book_title" type="text" readonly="">
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center ">
+                            <label class="col-md-12 form-control-label required">
+                                Hình ảnh
+                            </label>
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <div>
+                                    <img id="vip_book_img" src="" alt=""
+                                         style="max-height: 400px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center ">
+                            <label class="col-md-12 form-control-label required" for="from_date_vip">
+                                Từ ngày </label>
+                            <div class="col-md-12">
+                                <input required class="form-control" type="date" name="from_date" id="from_date_vip">
+                            </div>
+                        </div>
+
+                        <div class="form-group row align-items-center ">
+                            <label class="col-md-12 form-control-label required" for="to_date_vip">
+                                Đến ngày </label>
+                            <div class="col-md-12">
+                                <input required class="form-control" type="date" name="to_date" id="to_date_vip">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="form-group row align-items-center ">
+                                <button id="rent_button_vip" class="btn btn-outline-primary-2 btn-block" type="submit">
+                                    Thuê ngay
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <%@ include file="/master/foot.jsp" %>
 <% if (user != null) {%>
 <script>
+    var is_vip = '<%=user.vip_sub_id == null ? "" : user.vip_sub_id%>'
     var contextPath = '${pageContext.request.contextPath}'
     var account_balance = '<%=user.getAccount_balance()%>'
     var book_price = 0
@@ -3000,22 +1673,56 @@
 
     })
     function calDays() {
-        const date1 = new Date(from_date);
-        const date2 = new Date(to_date);
-        const timeDifference = Math.abs(date2.getTime() - date1.getTime());
-        days_rent = Math.ceil(timeDifference / (1000 * 3600 * 24)) + 1;
-        price_to_pay = days_rent * book_price
-        var text_to_show = "Số tiền bạn phải trả là : " + days_rent + " * " + book_price + " = " + price_to_pay
-        $("#calculated_price").removeAttr("hidden")
-        if ( price_to_pay > account_balance){
-            text_to_show += " <span class='text-danger'>(Lưu ý không đủ số dư)</span>"
-            $("#rent_button").attr("disabled", true)
-        } else {
-            $("#rent_button").attr("disabled", false)
-        }
-        $("#calculated_price").html(text_to_show)
+        <% if (user.vip_sub_id != null){%>
 
+        <%} else {%>
+            const date1 = new Date(from_date);
+            const date2 = new Date(to_date);
+            const timeDifference = Math.abs(date2.getTime() - date1.getTime());
+            days_rent = Math.ceil(timeDifference / (1000 * 3600 * 24)) + 1;
+            price_to_pay = days_rent * book_price
+            var text_to_show = "Số tiền bạn phải trả là : " + days_rent + " * " + book_price + " = " + price_to_pay
+            $("#calculated_price").removeAttr("hidden")
+            if ( price_to_pay > account_balance){
+                text_to_show += " <span class='text-danger'>(Lưu ý không đủ số dư)</span>"
+                $("#rent_button").attr("disabled", true)
+            } else {
+                $("#rent_button").attr("disabled", false)
+            }
+            $("#calculated_price").html(text_to_show)
+        <%}%>
     }
+    function showRentVipModal(id, title, img) {
+        $("#vip_book_id").val(id)
+        $("#vip_book_img").attr("src",contextPath + img )
+        $("#vip_book_title").val(title)
+    }
+    $("#from_date_vip").on('input', function () {
+        from_date_vip = $("#from_date_vip").val();
+        var date = new Date(from_date_vip);
+        var currentDate = new Date();
+        currentDate.setHours(0,0,0,0)
+        if (date < currentDate) {
+            toastr.warning("Ngày bắt đầu mượn phải sau ngày hiện tại.")
+            $("#from_date_vip").val(""); // Clear the input
+            from_date = ''
+            $("#rent_button_vip").attr("disabled", true)
+        }
+    })
+    $("#to_date_vip").on('input', function () {
+        to_date_vip = $("#to_date_vip").val();
+        if (from_date_vip !== '') {
+            var tempDate1 = new Date(from_date_vip)
+            var tempDate2 = new Date(to_date_vip)
+            if (tempDate2 < tempDate1) {
+                toastr.warning("Ngày bắt kết thúc phải sau ngày bắt đầu mượn.")
+                $("#rent_button_vip").attr("disabled", true)
+            } else {
+                $("#rent_button_vip").attr("disabled", false)
+
+            }
+        }
+    })
 </script>
 <%} else {%>
 <script>

@@ -297,4 +297,12 @@ public class HomeController {
             resp.sendRedirect(req.getContextPath() + "/");*/
         }
     }
+
+//    @WebServlet("/web-inf")
+//    public static class About extends HttpServlet{
+//        @Override
+//        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//            req.getRequestDispatcher("/views/web-inf.jsp").forward(req, resp);
+//        }
+//    }
 }

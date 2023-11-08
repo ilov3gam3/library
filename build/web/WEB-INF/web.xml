@@ -56,11 +56,11 @@
 
     <filter-mapping>
         <filter-name>LoginFilter</filter-name>
-        <url-pattern>/uploads</url-pattern>
+        <url-pattern>/pdfs/*</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>PDFFilter</filter-name>
-        <url-pattern>/uploads</url-pattern>
+        <url-pattern>/pdfs/*</url-pattern>
     </filter-mapping>
 
     <listener>

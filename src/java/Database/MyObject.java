@@ -67,6 +67,11 @@ public class MyObject {
     public String vip_sub_id;
     public String content;
     public String rating;
+    public String number_borrow;
+    public String discount;
+    public String penalty_fee_date;
+    public String rent_at;
+    public String rental_id;
 
     public static void main(String[] args) {
 //        System.out.println(this.getSoft_file());

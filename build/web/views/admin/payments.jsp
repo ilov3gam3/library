@@ -6,6 +6,7 @@
         <button class="btn btn-primary">Quay về trang quản trị</button>
     </a>
     <h3 class="mt-2">Quản lý tiền nạp vào.</h3>
+    <h5 class="mt-2">Tổng số tiền đã nạp: ${amount}</h5>
     <table class="table table-bordered table-striped" id="table">
         <thead>
             <tr>

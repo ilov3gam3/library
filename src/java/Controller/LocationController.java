@@ -50,7 +50,7 @@ public class LocationController {
             ArrayList<MyObject> locations = DB.getData("select concat(N'Tầng ', locations.floor, N', phòng ', locations.room, N', kệ ', locations.bookshelf, N', ngăn ', locations.shelf) as location_name from locations where id = ?", new String[]{location_id}, new String[]{"location_name"});
             if (locations.size() != 1){
                 req.getSession().setAttribute("mess", "error|Có lỗi xảy ra.");
-                resp.sendRedirect("/admin/location");
+                resp.sendRedirect(req.getContextPath() + "/admin/books");
             } else {
                 String sql = "select books.*, authors.name as author_name, genre.name as genre_name from books inner join authors on books.author_id = authors.id inner join genre on books.genre_id = genre.id where location_id = ?";
                 ArrayList<MyObject> books = DB.getData(sql, new String[]{location_id}, new String[]{"id", "title", "description", "author_id", "genre_id", "quantity", "cover_image","price", "soft_file", "available", "author_name", "genre_name", "year"});

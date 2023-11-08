@@ -20,6 +20,11 @@ public class RentalController {
             String[] fields = new String[]{"id", "book_id", "user_id", "from_date", "to_date", "price", "received_book", "returned_book", "created_at", "user_name", "created_at", "book_title", "status"};
             ArrayList<MyObject> rentals = DB.getData(sql, fields);
             req.setAttribute("rentals", rentals);
+            int amount = 0;
+            for (int i = 0; i < rentals.size(); i++) {
+                amount += Integer.parseInt(rentals.get(i).price);
+            }
+            req.setAttribute("amount", amount);
             req.getRequestDispatcher("/views/admin/rental.jsp").forward(req, resp);
         }
     }
@@ -31,16 +36,22 @@ public class RentalController {
             String type = req.getParameter("type");
             String sql;
             if (type.equals("returned_book")){
-                sql = "update rentals set returned_book = (case when returned_book = 'true' then 'false' else 'true' end) where id = ?";
+                sql = "update rentals set returned_book = (case when returned_book = 'true' then 'false' else 'true' end), status = 1 where id = ?";
             } else {
                 sql = "update rentals set received_book = (case when received_book = 'true' then 'false' else 'true' end) where id = ?";
             }
             boolean check = DB.executeUpdate(sql, new String[]{id});
+            if (type.equals("returned_book")){
+                System.out.println("update book quan");
+                sql = "update books set renting = renting - 1 where id = (select book_id from rentals where rentals.id = ?)";
+                check = DB.executeUpdate(sql, new String[]{id});
+            }
             if (check){
                 req.getSession().setAttribute("mess", "success|Thay đổi thành công.");
             } else {
                 req.getSession().setAttribute("mess", "error|Thay đổi không thành công.");
             }
+
             resp.sendRedirect(req.getContextPath() + "/admin/rentals");
         }
     }

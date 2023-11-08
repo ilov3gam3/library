@@ -51,8 +51,8 @@ public class BookController {
 
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String title = req.getParameter("title");
-            String description = req.getParameter("description");
+            String title = req.getParameter("title").replace("'", "`").replace("\"", "`").replace("\n", "").strip();
+            String description = req.getParameter("description").replace("'", "`").replace("\"", "`").replace("\n", "").strip();
             String author_id = req.getParameter("author_id");
             String genre_ids = req.getParameter("genre_id");
             String location_id = req.getParameter("location_id");
@@ -74,13 +74,13 @@ public class BookController {
             fileName = HandleFileUpload.getFileName(filePart);
             assert fileName != null;
             newFileName = HandleFileUpload.generateUniqueFileName(fileName);
-            uploadDir = req.getServletContext().getRealPath("/") + "uploads";
+            uploadDir = req.getServletContext().getRealPath("/") + "pdfs";
             filePath = Paths.get(uploadDir, newFileName);
             try (InputStream fileContent = filePart.getInputStream()) {
                 Files.copy(fileContent, filePath, StandardCopyOption.REPLACE_EXISTING);
             }
 
-            String soft_file = "/uploads/" + newFileName;
+            String soft_file = "/pdfs/" + newFileName;
 
             String sql = "insert into books(title, description, author_id, genre_id, quantity, cover_image, soft_file, available,price, renting,location_id, year) values (?,?,?,?,?,?,?,?,?,0,?, ?)";
             String[] vars = new String[]{title, description, author_id, genre_ids, quantity, cover_image, soft_file, "true",price, location_id, year};
@@ -124,6 +124,7 @@ public class BookController {
                 ArrayList<MyObject> reviews = DB.getData(sql, new String[]{book.id}, new String[]{"id", "book_id", "user_id", "content", "rating", "created_at", "name", "avatar"});
                 req.setAttribute("book", book);
                 req.setAttribute("reviews", reviews);
+                req.setAttribute("reviews_number", reviews.size());
                 req.getRequestDispatcher("/views/user/book-detail.jsp").forward(req, resp);
             }
         }
@@ -143,6 +144,7 @@ public class BookController {
                     int rent_days = (int) ((to_date.getTime() - from_date.getTime()) / (1000 * 60 * 60 * 24)) + 1;
                     MyObject book = DB.getData("select * from books where id = ?", new String[]{book_id}, new String[]{"id", "price", "quantity", "renting"}).get(0);
                     if (Integer.parseInt(book.renting) >= Integer.parseInt(book.quantity)){
+                        System.out.println("hết sách");
                         req.getSession().setAttribute("mess", "warning|Đã hết sách trong kho.");
                     } else {
                         int have_to_pay = rent_days * Integer.parseInt(book.price);
@@ -190,42 +192,57 @@ public class BookController {
             String description = req.getParameter("update_description");
             String author_id = req.getParameter("update_author_id");
             String genre_ids = req.getParameter("update_genre_id");
+            String year = req.getParameter("year_update");
             String quantity = req.getParameter("update_quantity");
             String price = req.getParameter("update_price");
             Part filePart = req.getPart("update_image");
-            String fileName = HandleFileUpload.getFileName(filePart);
-            assert fileName != null;
-            String newFileName = HandleFileUpload.generateUniqueFileName(fileName);
-            String uploadDir = req.getServletContext().getRealPath("/") + "uploads";
-            Path filePath = Paths.get(uploadDir, newFileName);
-            try (InputStream fileContent = filePart.getInputStream()) {
-                Files.copy(fileContent, filePath, StandardCopyOption.REPLACE_EXISTING);
+            String fileName = "";
+            String newFileName = "";
+            String uploadDir = "";
+            String soft_file;
+            Path filePath;
+            String cover_image;
+            if (filePart !=null && filePart.getSize() > 0){
+                fileName = HandleFileUpload.getFileName(filePart);
+                assert fileName != null;
+                newFileName = HandleFileUpload.generateUniqueFileName(fileName);
+                uploadDir = req.getServletContext().getRealPath("/") + "uploads";
+                filePath = Paths.get(uploadDir, newFileName);
+                try (InputStream fileContent = filePart.getInputStream()) {
+                    Files.copy(fileContent, filePath, StandardCopyOption.REPLACE_EXISTING);
+                }
+                cover_image = "/uploads/" + newFileName;
+            } else {
+                cover_image = "";
             }
-            String cover_image = "/uploads/" + newFileName;
 
             filePart = req.getPart("update_soft_file");
-            fileName = HandleFileUpload.getFileName(filePart);
-            assert fileName != null;
-            newFileName = HandleFileUpload.generateUniqueFileName(fileName);
-            uploadDir = req.getServletContext().getRealPath("/") + "uploads";
-            filePath = Paths.get(uploadDir, newFileName);
-            try (InputStream fileContent = filePart.getInputStream()) {
-                Files.copy(fileContent, filePath, StandardCopyOption.REPLACE_EXISTING);
+            if (filePart !=null && filePart.getSize() > 0){
+                fileName = HandleFileUpload.getFileName(filePart);
+                assert fileName != null;
+                newFileName = HandleFileUpload.generateUniqueFileName(fileName);
+                uploadDir = req.getServletContext().getRealPath("/") + "pdfs";
+                filePath = Paths.get(uploadDir, newFileName);
+                try (InputStream fileContent = filePart.getInputStream()) {
+                    Files.copy(fileContent, filePath, StandardCopyOption.REPLACE_EXISTING);
+                }
+                soft_file = "/pdfs/" + newFileName;
+            } else {
+                soft_file = "";
             }
-
-            String soft_file = "/uploads/" + newFileName;
             String sql = "UPDATE books\n" +
                     "SET title = ?,\n" +
                     "    description = ?,\n" +
                     "    author_id = ?,\n" +
                     "    genre_id = ?,\n" +
                     "    quantity = ?,\n" +
-                    "    cover_image = ?,\n" +
-                    "    soft_file = ?,\n" +
+                    "    cover_image = IIF(? = '', cover_image, ?),\n" +
+                    "    soft_file = IIF(? = '', soft_file, ?),\n" +
                     "    available = ?,\n" +
-                    "    price = ?\n" +
+                    "    price = ?\n," +
+                    "   year = ?" +
                     "WHERE id = ?";
-            String[] vars = new String[]{title, description, author_id, genre_ids, quantity, cover_image, soft_file, "true",price, String.valueOf(id)};
+            String[] vars = new String[]{title, description, author_id, genre_ids, quantity, cover_image,cover_image, soft_file,soft_file, "true",price,year, String.valueOf(id)};
             boolean check = DB.executeUpdate(sql, vars);
             if (check){
                 req.setAttribute("mess", "success|Cập nhật sách thành công");
@@ -244,6 +261,7 @@ public class BookController {
             String[] fields = new String[]{"id", "book_id", "user_id", "from_date", "to_date", "price", "received_book", "returned_book", "created_at", "book_title", "cover_image", "soft_file", "status"};
             MyObject user = (MyObject) req.getSession().getAttribute("login");
             ArrayList<MyObject> rentals = DB.getData(sql, new String[]{user.id}, fields);
+            System.out.println(rentals);
             req.setAttribute("rentals", rentals);
             req.getRequestDispatcher("/views/user/view-renting.jsp").forward(req, resp);
         }
@@ -354,6 +372,33 @@ public class BookController {
                     resp.getOutputStream().write(pdf_bytes);
                 }
             }
+        }
+    }
+
+    @WebServlet("/admin/find-book-location")
+    public static class FindLocation extends HttpServlet{
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            req.getRequestDispatcher("/views/admin/find-book-location.jsp").forward(req, resp);
+        }
+
+        @Override
+        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            String name_id = req.getParameter("name_id");
+            String sql ;
+            String[] vars;
+            try {
+                int id = Integer.parseInt(name_id);
+                sql = "select books.*, concat(N'Tầng ', locations.floor, N', phòng ', locations.room, N', kệ ', locations.bookshelf, N', ngăn ', locations.shelf) as location_name from books inner join locations on books.location_id = locations.id where books.id = ?";
+                vars = new String[]{name_id};
+            } catch (NumberFormatException e){
+                sql = "select books.*, concat(N'Tầng ', locations.floor, N', phòng ', locations.room, N', kệ ', locations.bookshelf, N', ngăn ', locations.shelf) as location_name from books inner join locations on books.location_id = locations.id where title like ?";
+                vars = new String[]{"%" + name_id + "%"};
+            }
+            String[] fields = new String[]{"id", "title", "location_name"};
+            ArrayList<MyObject> books = DB.getData(sql, vars, fields);
+            req.setAttribute("books", books);
+            req.getRequestDispatcher("/views/admin/find-book-location.jsp").forward(req, resp);
         }
     }
 }

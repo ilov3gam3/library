@@ -60,7 +60,7 @@ min-width: 70px;" class="btn btn-primary text-center">xem file</a>
 min-width: 70px;">Xóa
                         </button>
                     </a>
-                    <button type="button" onclick="showMyModal('${book.getId()}','${book.getTitle()}','${book.getDescription()}','${book.getAuthor_name()}','${book.getGenre_name()}','${book.getQuantity()}','${book.price}','${book.getCover_image()}','${book.getSoft_file()}', '${book.getYear()}')" data-toggle="modal" data-target="#editModal" class="btn btn-warning btn-block" style="
+                    <button type="button" onclick="showMyModal('${book.getId()}','${book.getTitle()}','${book.getDescription()}','${book.getAuthor_id()}','${book.getGenre_id()}','${book.getQuantity()}','${book.price}','${book.getCover_image()}','${book.getSoft_file()}', '${book.getYear()}')" data-toggle="modal" data-target="#editModal" class="btn btn-warning btn-block" style="
         border-top-width: 0;
         border-left-width: 0;
         border-right-width: 0;
@@ -298,7 +298,7 @@ min-width: 70px;">Xóa
                                 Ảnh bìa
                             </label>
                             <div class="col-md-12">
-                                <input hidden class="form-control" id="update_image" name="update_image" type="file"  required="">
+                                <input hidden class="form-control" id="update_image" name="update_image" type="file" >
                             </div>
                         </div>
                         <div class="form-group row ">
@@ -309,7 +309,7 @@ min-width: 70px;">Xóa
 
                         <div class="form-group row align-items-center ">
                             <div class="col-md-12">
-                                <input class="form-control" id="update_soft_file" name="update_soft_file" type="file"  required="" accept="application/pdf">
+                                <input class="form-control" id="update_soft_file" name="update_soft_file" type="file" accept="application/pdf">
                             </div>
                         </div>
                         <div class="container">

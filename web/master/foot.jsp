@@ -27,195 +27,14 @@
                         </a>
                     </div>
                     <div class="widget html-1">
-                        <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+                        <p>Chúng tôi tự hào về việc cung cấp một môi trường thân thiện và dễ sử dụng cho bạn khám phá, nghiên cứu, và học hỏi. Thư viện của chúng tôi cung cấp sự truy cập dễ dàng đến kiến thức và thông tin cần thiết cho mọi người, từ học sinh, sinh viên, người yêu thích đọc sách đến các nhà nghiên cứu và chuyên gia trong các lĩnh vực khác nhau.</p>
                         <div class="widget-about-info">
                             <div class="row">
-                                <div class="col-sm-6 col-md-4"><span class="widget-about-title">Got Question? Call us 24/7</span> <a href="tel:123456789">+0123 456 789</a></div>
-                                <div class="col-sm-6 col-md-8"><span class="widget-about-title">Payment Method</span>
-                                    <figure class="footer-payments"><img src="${pageContext.request.contextPath}/assets/payments.png" alt="Payment methods" width="272" height="20" /></figure>
-                                </div>
+                                <div class="col-sm-6 col-md-4"><span class="widget-about-title">Bạn có thắc mắc? liên hệ chúng tôi 24/7</span>0327786417</div>
                             </div>
                         </div>
                     </div>
-                    <div class="widget html-2">
-                        <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.</p>
-                    </div>
-                    <div class="widget-call"><i class="icon-phone"></i> Got Question? Call us 24/7 <a href="tel:#">+0123 456 789</a></div>
                 </div>
-
-                <div class="layout-column wrapper block">
-                    <h3 class="h3 block-title">
-                        Information
-                    </h3>
-                    <div class="block-content">
-                        <ul>
-                            <li>
-                                <a
-                                        id="link-cms-page-4-1"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=4&amp;controller=cms&amp;id_lang=1"
-                                        title="Learn more about us">
-                                    About us
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-7-1"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=7&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    FAQ
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-9-1"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=9&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    How to shop on Molla
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-5-1"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=5&amp;controller=cms&amp;id_lang=1"
-                                        title="Our secure payment method">
-                                    Secure payment
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-10-1"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=10&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    Payment Methods
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="layout-column wrapper block">
-                    <h3 class="h3 block-title">
-                        Customer Service
-                    </h3>
-                    <div class="block-content">
-                        <ul>
-                            <li>
-                                <a
-                                        id="link-cms-page-3-2"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=3&amp;controller=cms&amp;id_lang=1"
-                                        title="Our terms and conditions of use">
-                                    Terms and conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-10-2"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=10&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    Payment Methods
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-11-2"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=11&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    Money-back guarantee!
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-12-2"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=12&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    Returns
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-13-2"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=13&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    Shipping
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-cms-page-14-2"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?id_cms=14&amp;controller=cms&amp;id_lang=1"
-                                        title="">
-                                    Privacy Policy
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="layout-column wrapper block">
-                    <h3 class="h3 block-title">
-                        My Account
-                    </h3>
-                    <div class="block-content">
-                        <ul>
-                            <li>
-                                <a
-                                        id="link-static-page-sitemap-3"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?controller=sitemap"
-                                        title="Lost ? Find what your are looking for">
-                                    Sitemap
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-static-page-stores-3"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?controller=stores"
-                                        title="">
-                                    Stores
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-static-page-contact-3"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?controller=contact"
-                                        title="Use our form to contact us">
-                                    Contact us
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-static-page-authentication-3"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?controller=authentication"
-                                        title="">
-                                    Login
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        id="link-static-page-my-account-3"
-                                        class="cms-page-link"
-                                        href="https://prestashop17.joommasters.com/molla/index.php?controller=my-account"
-                                        title="">
-                                    My account
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
             </div>
         </div>
     </div>
@@ -227,49 +46,20 @@
                     <p>Copyright © 2020 Molla Store. All Rights Reserved. <a class="cms-page-link" href="index.php?id_cms=3&controller=cms&id_lang=1">Terms Of Use</a> <a class="cms-page-link" href="index.php?id_cms=14&controller=cms&id_lang=1">Privacy Policy</a></p>
                 </div>
                 <div class="col-12 col-lg-5 text-lg-right">
-
-
-                    <span class="social-label">Social Media</span>
-                    <ul id="social-links" class="social-links">
-                        <li class="facebook">
-                            <a class="social-icon social-facebook" href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-f" ></i></a>
-                        </li>
-                        <li class="twitter">
-                            <a class="social-icon social-twitter" href="https://twitter.com/" target="_blank"><i class="icon-twitter" ></i></a>
-                        </li>
-                        <li class="instagram">
-                            <a class="social-icon social-instagram" href="https://www.instagram.com/" target="_blank"><i class="icon-instagram" ></i></a>
-                        </li>
-                        <li class="youtube">
-                            <a class="social-icon social-youtube" href="https://www.youtube.com/" target="_blank"><i class="icon-youtube" ></i></a>
-                        </li>
-                        <li class="pinterest">
-                            <a class="social-icon social-pinterest" href="https://www.pinterest.com/" target="_blank"><i class="icon-pinterest" ></i></a>
-                        </li>
-                    </ul>
-
                 </div>
             </div>
         </div>
     </div>
-
 </footer>
-
-
 <button id="scroll-top" title="Back to top" class="show">
     <i class="icon-arrow-up"></i>
 </button>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://prestashop17.joommasters.com/molla/themes/jms_molla/assets/cache/bottom-12ff6d38.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<%--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>--%>
-<%--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>--%>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
-<%--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>--%>
-
 <script>
     const mess_error = "${error}"
     const mess_success = "${success}"
@@ -337,7 +127,6 @@
     }
 
 </style>
-
 <script type="text/javascript">
     'use strict';
     var woorebought = {
@@ -480,6 +269,5 @@
         });
     });
 </script>
-
 </body>
 </html>

@@ -61,6 +61,5 @@ $("#createOrder").on('submit', function (e){
       }
     }
   });
-
 })
 </script>

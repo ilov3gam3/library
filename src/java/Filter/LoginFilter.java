@@ -9,14 +9,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-@WebFilter(urlPatterns = {"/", "/", "/"})
+//@WebFilter(urlPatterns = {"/", "/", "/"})
 public class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         MyObject user = (MyObject) req.getSession().getAttribute("login");
-        System.out.println("login filter");
         if (user !=null){
             chain.doFilter(request, response);
         } else {

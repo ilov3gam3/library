@@ -2,6 +2,11 @@
 <%@ include file="/master/head.jsp" %>
 <%@page pageEncoding="UTF-8" %>
 <div class="container mt-2">
+    <a href="${pageContext.request.contextPath}/admin/admin-panel">
+        <button class="btn btn-primary">Quay về trang quản trị</button>
+    </a>
+    <h3 class="mt-2 mb-2">Đơn mượn sách</h3>
+    <h5 class="mt-2 mb-2">Tổng số tiền: ${amount}</h5>
     <div class="row">
         <table class="table table-bordered table-striped" id="table">
             <thead>
@@ -36,14 +41,12 @@
                                 <button class="btn-danger" onclick="toastr.warning('Người dùng chưa nhận sách, không thể thay đổi trạng thái.')">Chưa trả</button>
                             </c:when>
                             <c:when test="${rental.getReceived_book() == '1'}">
-                                <a href="${pageContext.request.contextPath}/admin/change-rental-status?id=${rental.getId()}&type=returned_book">
-                                        ${rental.getReturned_book() == "0" ? " <button class='btn-danger'>Chưa trả</button>" : " <button class='btn-primary'>Đã trả</button>"}
-                                </a>
+                                    ${rental.getReturned_book() == "0" ? "<a href=\"${pageContext.request.contextPath}/admin/change-rental-status?id=${rental.getId()}&type=returned_book\"><button class='btn-danger'>Chưa trả</button></a>" : " <button onclick=\"toastr.warning('Người dùng chưa nhận sách, không thể thay đổi trạng thái.')\" class='btn-primary'>Đã trả</button>"}
                             </c:when>
                         </c:choose>
                     </td>
                     <td>
-                        ${rental.getStatus() == '0' ? "đang mượn" : (rental.getStatus() == '1' ? "Đã mượn xong" : "Đã hủy")}
+                        ${rental.getStatus() == "0" ? "đang mượn" : (rental.getStatus() == "1" ? "Đã trả" : "Đã hủy")}
                     </td>
                     <td>${rental.getCreated_at()}</td>
                 </tr>

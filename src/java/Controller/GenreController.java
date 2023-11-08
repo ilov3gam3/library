@@ -75,19 +75,10 @@ public class GenreController {
 
     @WebServlet("/admin/genre/edit")
     public static class GenreEdit extends HttpServlet{
-        /*@Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String[] id = new String[]{req.getParameter("id")};
-            String sql = "select * from genre where id = ?";
-            String[] field = new String[]{"id","name","description"};
-            ArrayList<MyObject> genre_list = DB.getData(sql,id,field);
-            req.setAttribute("genre_list",genre_list);
-            req.getRequestDispatcher("/views/admin/genre-list.jsp").forward(req, resp);
-        }*/
 
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            int id = Integer.parseInt(req.getParameter("id"));
+            int id = Integer.parseInt(req.getParameter("id_update"));
             String name = req.getParameter("name_update");
             String description = req.getParameter("description_update");
             String sql = "update genre set name = ?, description = ? where id = ?";

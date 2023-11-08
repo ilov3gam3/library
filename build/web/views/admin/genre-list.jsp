@@ -95,7 +95,7 @@ min-width: 70px;">Sửa
             <div class="modal-body">
                 <form action="${pageContext.request.contextPath}/admin/genre/edit" method="post">
                     <div class="container">
-                        <input type="hidden" name="id" id="id">
+                        <input type="hidden" name="id_update" id="id_update">
                         <div class="form-group row align-items-center ">
                             <label class="col-md-12 form-control-label required" for="name_update">
                                 Tên </label>
@@ -132,7 +132,7 @@ min-width: 70px;">Sửa
 <script>
     function showMyModal(id, name, description) {
         $("#name_update").val(name)
-        $("#id").val(id)
+        $("#id_update").val(id)
         $("#description_update").val(description)
     }
 $(document).ready(function () {

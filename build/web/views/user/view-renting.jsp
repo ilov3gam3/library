@@ -56,7 +56,7 @@
               <%if (row_to_date.after(currentDate) && row_from_date.before(currentDate) && rentals.get(i).status.equals("0")) {%>
                 <tr>
                 <td>
-                  <a href="${pageContext.request.contextPath}/view-book?id=<%=rentals.get(i).id%>">
+                  <a href="${pageContext.request.contextPath}/view-book?id=<%=rentals.get(i).book_id%>">
                     <%=rentals.get(i).book_title%>
                   </a>
                 </td>
@@ -70,11 +70,10 @@
                 <td class="text-center"><%=rentals.get(i).returned_book.equals("1") ? "rồi" : "Chưa"%></td>
                 <td><%=rentals.get(i).created_at%></td>
                 <td>
-                  <form action="${pageContext.request.contextPath}/user/view-pdf" method="post">
-                    <input type="hidden" name="rent_id" value="<%=rentals.get(i).id%>">
+                  <a target="_blank" href="${pageContext.request.contextPath}<%=rentals.get(i).getSoft_file()%>">
                     <button type="submit" class="btn btn-primary">Đọc sách</button>
-                  </form>
-                    <button onclick="showReviewForm('<%=rentals.get(i).id%>', '<%=rentals.get(i).book_title%>', '${pageContext.request.contextPath}<%=rentals.get(i).cover_image%>')" class="btn btn-warning mt-1">Viết Đánh giá</button>
+                  </a>
+                    <button onclick="showReviewForm('<%=rentals.get(i).book_id%>', '<%=rentals.get(i).book_title%>', '${pageContext.request.contextPath}<%=rentals.get(i).cover_image%>')" class="btn btn-warning mt-1">Viết Đánh giá</button>
                 </td>
               </tr>
               <%}%>
@@ -103,7 +102,7 @@
             <%if (row_from_date.after(currentDate) && rentals.get(i).status.equals("0")) {%>
             <tr>
               <td>
-                <a href="${pageContext.request.contextPath}/view-book?id=<%=rentals.get(i).id%>">
+                <a href="${pageContext.request.contextPath}/view-book?id=<%=rentals.get(i).book_id%>">
                   <%=rentals.get(i).book_title%>
                 </a>
               </td>
@@ -117,7 +116,7 @@
               <td class="text-center"><%=rentals.get(i).returned_book.equals("1") ? "rồi" : "Chưa"%></td>
               <td><%=rentals.get(i).created_at%></td>
               <td>
-                <button onclick="showReviewForm('<%=rentals.get(i).id%>', '<%=rentals.get(i).book_title%>', '${pageContext.request.contextPath}<%=rentals.get(i).cover_image%>')" class="btn btn-warning mt-1">Viết Đánh giá</button>
+                <button onclick="showReviewForm('<%=rentals.get(i).book_id%>', '<%=rentals.get(i).book_title%>', '${pageContext.request.contextPath}<%=rentals.get(i).cover_image%>')" class="btn btn-warning mt-1">Viết Đánh giá</button>
               </td>
             </tr>
             <%}%>
@@ -146,7 +145,7 @@
             <%if (row_to_date.before(currentDate) || !rentals.get(i).status.equals("0")) {%>
             <tr>
               <td>
-                <a href="${pageContext.request.contextPath}/view-book?id=<%=rentals.get(i).id%>">
+                <a href="${pageContext.request.contextPath}/view-book?id=<%=rentals.get(i).book_id%>">
                   <%=rentals.get(i).book_title%>
                 </a>
               </td>
@@ -160,7 +159,7 @@
               <td class="text-center"><%=rentals.get(i).returned_book.equals("1") ? "rồi" : "Chưa"%></td>
               <td><%=rentals.get(i).created_at%></td>
               <td>
-                <button class="btn btn-warning mt-1" onclick="showReviewForm('<%=rentals.get(i).id%>', '<%=rentals.get(i).book_title%>', '${pageContext.request.contextPath}<%=rentals.get(i).cover_image%>')">Viết Đánh giá</button>
+                <button class="btn btn-warning mt-1" onclick="showReviewForm('<%=rentals.get(i).book_id%>', '<%=rentals.get(i).book_title%>', '${pageContext.request.contextPath}<%=rentals.get(i).cover_image%>',)">Viết Đánh giá</button>
               </td>
             </tr>
             <%}%>
@@ -182,7 +181,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="${pageContext.request.contextPath}/user/review-book" method="post" onsubmit="check_review_form()">
+        <form action="${pageContext.request.contextPath}/user/review-book" method="post" onsubmit="check_review_form(event)">
           <div class="container">
             <input type="hidden" id="book_id" name="book_id">
             <div class="form-group row align-items-center ">
@@ -204,126 +203,21 @@
             </div>
             <div class="form-group">
               <label for="review">Viết đánh giá</label>
-              <textarea class="form-control" name="review" id="review" style="width: 100%;" rows="12"></textarea>
+              <textarea required class="form-control" name="review" id="review" style="width: 100%;" rows="12"></textarea>
             </div>
-            <div class="form-group">
-                <input type="hidden" name="star_rate" id="star_rate">
-                <input class="star star-5" id="star-5" type="radio" name="star" onclick="$('#star_rate').val((6-1))"/>
-                <label class="star star-5" for="star-5"></label>
-                <input class="star star-4" id="star-4" type="radio" name="star" onclick="$('#star_rate').val((6-2))"/>
-                <label class="star star-4" for="star-4"></label>
-                <input class="star star-3" id="star-3" type="radio" name="star" onclick="$('#star_rate').val((6-3))"/>
-                <label class="star star-3" for="star-3"></label>
-                <input class="star star-2" id="star-2" type="radio" name="star" onclick="$('#star_rate').val((6-4))"/>
-                <label class="star star-2" for="star-2"></label>
-                <input class="star star-1" id="star-1" type="radio" name="star" onclick="$('#star_rate').val((6-5))"/>
-                <label class="star star-1" for="star-1"></label>
-              <style>
-                @import url(https://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
-                *{
-                  margin: 0;
-                  padding: 0;
-                  font-family: roboto;
-                }
-                .cont{
-                  width: 93%;
-                  max-width: 350px;
-                  text-align: center;
-                  margin: 4% auto;
-                  padding: 30px 0;
-                  color: #EEE;
-                  border-radius: 5px;
-                  border: thin solid #444;
-                  overflow: hidden;
-                }
-
-                hr{
-                  margin: 20px;
-                  border: none;
-                  border-bottom: thin solid rgba(255,255,255,.1);
-                }
-
-                div.title{
-                  font-size: 2em;
-                }
-
-                h1 span{
-                  font-weight: 300;
-                  color: #Fd4;
-                }
-
-                div.stars{
-                  width: 270px;
-                  display: inline-block;
-                }
-
-                input.star{
-                  display: none;
-                }
-
-                label.star {
-                  float: right;
-                  padding: 10px;
-                  font-size: 36px;
-                  color: #444;
-                  transition: all .2s;
-                }
-
-                input.star:checked ~ label.star:before {
-                  content:'\f005';
-                  color: #FD4;
-                  transition: all .25s;
-                }
-
-
-                input.star-5:checked ~ label.star:before {
-                  color:#FE7;
-                  text-shadow: 0 0 20px #952;
-                }
-
-                input.star-1:checked ~ label.star:before {
-                  color: #F62;
-                }
-
-                label.star:hover{
-                  transform: rotate(-15deg) scale(1.3);
-                }
-
-                label.star:before{
-                  content:'\f006';
-                  font-family: FontAwesome;
-                }
-
-                .rev-box{
-                  overflow: hidden;
-                  height: 0;
-                  width: 100%;
-                  transition: all .25s;
-                }
-
-                textarea.review{
-                  border: none;
-                  width: 100%;
-                  max-width: 100%;
-                  height: 100px;
-                  padding: 10px;
-                  box-sizing: border-box;
-                  color: #EEE;
-                }
-
-                label.review{
-                  display: block;
-                  transition:opacity .25s;
-                }
-                input.star:checked ~ .rev-box{
-                  height: 125px;
-                  overflow: visible;
-                }
-              </style>
+            <input type="hidden" id="rating" name="star_rate" value="">
+            <div class="form-group d-flex justify-content-center">
+                <div class="row">
+                  <button type="button" onclick="changeRating(1)" id="1" style="border-top-width: 0;border-left-width: 0;border-right-width: 0;padding-right: 0;padding-left: 0;min-width: 70px;" class="btn btn-primary m-1">1&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                  <button type="button" onclick="changeRating(2)" id="2" style="border-top-width: 0;border-left-width: 0;border-right-width: 0;padding-right: 0;padding-left: 0;min-width: 70px;" class="btn btn-primary m-1">2&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                  <button type="button" onclick="changeRating(3)" id="3" style="border-top-width: 0;border-left-width: 0;border-right-width: 0;padding-right: 0;padding-left: 0;min-width: 70px;" class="btn btn-primary m-1">3&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                  <button type="button" onclick="changeRating(4)" id="4" style="border-top-width: 0;border-left-width: 0;border-right-width: 0;padding-right: 0;padding-left: 0;min-width: 70px;" class="btn btn-primary m-1">4&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                  <button type="button" onclick="changeRating(5)" id="5" style="border-top-width: 0;border-left-width: 0;border-right-width: 0;padding-right: 0;padding-left: 0;min-width: 70px;" class="btn btn-primary m-1">5&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                </div>
             </div>
             <div class="container">
               <div class="form-group row align-items-center ">
-                <button class="btn btn-outline-primary-2 btn-block" id="rent_button" type="submit">
+                <button class="btn btn-outline-primary-2 btn-block" type="submit">
                   Gửi đánh giá
                 </button>
               </div>
@@ -337,14 +231,30 @@
 <%@ include file="/master/foot.jsp" %>
 <script>
   function showReviewForm(book_id, title, img) {
+    console.log("bookid", book_id)
     $("#book_id").val(book_id)
     $("#book_title").val(title)
     $("#cover_image").attr("src", img)
     $("#reviewModal").modal('show');
   }
-  function check_review_form() {
-    if ($("#star_rate").val() === ''){
+  function check_review_form(e) {
+    if ($("#rating").val() === ''){
       toastr.warning("Vui lòng đánh giá sao")
+      e.preventDefault()
+    }
+  }
+  function resetAllRating() {
+    for (let i = 1; i < 6; i++) {
+      $("#" + i).attr("class", "btn btn-primary m-1")
+      $("#" + i).html(i + '&nbsp;<i class="fa fa-star-o" aria-hidden="true">');
+    }
+  }
+  function changeRating(x) {
+    $("#rating").val(x)
+    resetAllRating()
+    for (let i = 1; i < x+1; i++) {
+      $("#" + i).attr("class", "btn btn-warning m-1")
+      $("#" + i).html(i + '&nbsp;<i class="fa fa-star" aria-hidden="true">');
     }
   }
 </script>

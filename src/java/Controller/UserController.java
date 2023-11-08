@@ -53,11 +53,11 @@ public class UserController {
         }
 
         public static boolean checkPhone(String phone) {
-            return DB.getData("select * from users where email = ?", new String[]{phone}, new String[]{"id"}).size() == 0;
+            return DB.getData("select * from users where phone = ?", new String[]{phone}, new String[]{"id"}).size() == 0;
         }
 
         public static boolean checkPhoneExcept(String phone, String id) {
-            return DB.getData("select * from users where email = ? and id != ?", new String[]{phone, id}, new String[]{"id"}).size() == 0;
+            return DB.getData("select * from users where phone = ? and id != ?", new String[]{phone, id}, new String[]{"id"}).size() == 0;
         }
 
         @Override
@@ -92,10 +92,12 @@ public class UserController {
             form.address = address;
             form.name = name;
             boolean register_success = true;
+            String context = req.getContextPath();
             if (check_email && check_phone) {
                 String uuid = UUID.randomUUID().toString();
+                String tail_url = "/active?uuid=" + uuid;
                 if (re_password.equals(password)) {
-                    String sql = "insert into users(name, email, phone, avatar, dob, address, password, is_verify, id_admin, is_block, uuid, gender) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+                    String sql = "insert into users(name, email, phone, avatar, dob, address, password, is_verify, is_admin, is_block, uuid, gender, account_balance) values (?,?,?,?,?,?,?,?,?,?,?,?, 0)";
                     password = BCrypt.hashpw(password, BCrypt.gensalt(WORK_FACTOR));
                     String[] vars = {name, email, phone, "/assets/default-avatar.webp", dob, address, password, "false", "false", "false", uuid, gender};
                     boolean check = DB.executeUpdate(sql, vars);
@@ -103,7 +105,7 @@ public class UserController {
                         ExecutorService executorService = Executors.newSingleThreadExecutor();
                         executorService.submit(() -> {
                             try {
-                                String url = Config.app_url + req.getContextPath() + "/active?uuid=" + uuid;
+                                String url = Config.app_url + context + tail_url;
                                 String html = "<h1>Nhấn vào <a href='" + url + "'> đây </a> để kích hoạt tải khoản của bạn</h1>";
                                 SendMail.send(email, "Kích hoạt tài khoản", html);
                             } catch (Exception e) {
@@ -263,7 +265,7 @@ public class UserController {
     public static class ChangePasswor extends HttpServlet {
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            req.getRequestDispatcher("/views/user/change-password").forward(req, resp);
+            req.getRequestDispatcher("/views/user/change-password.jsp").forward(req, resp);
         }
 
         @Override
@@ -738,6 +740,22 @@ public class UserController {
                 req.getSession().setAttribute("mess", "error|Cập nhật không thành công.");
             }
             resp.sendRedirect(req.getContextPath() + "/admin/user");
+        }
+    }
+
+    @WebServlet("/admin/vip_subs")
+    public static class AdminViewVipSubs extends HttpServlet{
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            String sql = "select vip_subscriptions.*, users.name as user_name from vip_subscriptions inner join users on vip_subscriptions.user_id = users.id";
+            ArrayList<MyObject> vips = DB.getData(sql, new String[]{"id", "user_id", "from_date", "to_date", "price", "discount", "user_name"});
+            req.setAttribute("vips", vips);
+            int amount = 0;
+            for (int i = 0; i < vips.size(); i++) {
+                amount += Integer.parseInt(vips.get(i).price);
+            }
+            req.setAttribute("amount", amount);
+            req.getRequestDispatcher("/views/admin/vip_subs.jsp").forward(req, resp);
         }
     }
 }

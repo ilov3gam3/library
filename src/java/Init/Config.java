@@ -24,11 +24,14 @@ public class Config {
     public static String email_password = "iahskjpdwuvcyzym";
 
     public static String app_name = "Sách vui";
-    public static String app_host = "localhost:8080";
-    public static String app_url = "http://localhost:8080";
+//    public static String app_host = "localhost:8080";
+//    public static String app_url = "http://localhost:8080";
+    public static String app_host = "sachvui.io.vn";
+    public static String app_url = "https://sachvui.io.vn";
     public static String client_id="950893291709-9rqulakhl78cnlejkuofncru62p49epo.apps.googleusercontent.com";
     public static String client_secret="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";
-    public static String redirect_uri="http://localhost:8080/library/login-google";
+    public static String redirect_uri="https://sachvui.io.vn/login-google";
+//    public static String redirect_uri="http://localhost:8080/library/login-google";
 
     public static String vnp_PayUrl = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
     public static String vnp_ReturnUrl = app_url + contextPath + "/user/vnpay-result";

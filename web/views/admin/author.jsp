@@ -317,15 +317,14 @@
       </form>
     </div>
     <div class="col-md-8 text-center">
-      <h3>Author List</h3>
+      <h3>Danh sách tác giả</h3>
       <table class="table table-bordered table-striped" id="table">
         <thead>
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Nationality</th>
-          <th class="col-4">Biography</th>
-          <th scope="col">Image</th>
-          <th scope="col">Action</th>
+          <th scope="col">Tên</th>
+          <th scope="col">Quốc tịch</th>
+          <th class="col-4">Tiểu sử</th>
+          <th scope="col">Ảnh</th>
         </tr>
         </thead>
         <tbody>
@@ -335,70 +334,10 @@
             <td>${author.getNationality()}</td>
             <td class="col-4">${author.getBiography()}</td>
             <td><img src="${pageContext.request.contextPath}${author.getImage()}" alt="Uploaded Image"></td>
-            <td>
-              <a style="
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    padding-right: 0;
-    padding-left: 0;
-min-width: 70px;" role="button" class="btn btn-danger" href="${pageContext.request.contextPath}/admin/author/delete?id=${author.getId()}">Delete</a>
-              <a style="
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    padding-right: 0;
-    padding-left: 0;
-min-width: 70px;" role="button" class="btn btn-warning" href="${pageContext.request.contextPath}/admin/author/edit?id=${author.getId()}">Edit</a>
-            </td>
           </tr>
         </c:forEach>
         </tbody>
       </table>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cỉnh sửa</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="${pageContext.request.contextPath}/admin/genre/edit" method="post">
-          <div class="container">
-            <input type="hidden" name="id" id="id">
-            <div class="form-group row align-items-center ">
-              <label class="col-md-12 form-control-label required" for="name_update">
-                Tên </label>
-              <div class="col-md-12">
-                <input class="form-control" id="name_update" name="name_update" type="text" required="">
-              </div>
-            </div>
-            <div class="form-group row align-items-center ">
-              <label class="col-md-12 form-control-label required" for="description_update">
-                Mô tả
-              </label>
-              <div class="col-md-12">
-                            <textarea class="form-control" name="description_update" id="description_update" rows="8" style="width: 100%"
-                                      required></textarea>
-              </div>
-            </div>
-            <div class="container">
-              <div class="form-group row align-items-center ">
-
-                <button class="btn btn-outline-primary-2 btn-block" id="submit_update" type="submit">
-                  Cập nhật
-                </button>
-              </div>
-
-            </div>
-          </div>
-        </form>
-      </div>
     </div>
   </div>
 </div>
