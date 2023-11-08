@@ -17,7 +17,7 @@ public class MyScheduledTask implements Runnable{
         LocalDate twoDaysBefore = currentDate.minusDays(2);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String twoDaysBeforeStr = twoDaysBefore.format(formatter);
-        String sql = "update rentals set status = -1 where from_date <= ? and received_book = 'false' and where status = 0";
+        String sql = "update rentals set status = -1 where from_date <= ? and received_book = 'false' and status = 0";
         String[] vars = new String[]{twoDaysBeforeStr};
         System.out.println(sql + "with para: " + Arrays.toString(vars));
         boolean check = DB.executeUpdate(sql, vars);

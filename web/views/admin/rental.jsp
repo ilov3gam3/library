@@ -24,16 +24,26 @@
             </thead>
             <tbody>
             <c:forEach items="${rentals}" var="rental">
-                <tr>
+                <tr ${rental.getStatus() == "-1" ? "class='table-danger'" : (rental.getStatus() == "0" ? "class='table-success'" : "")}>
                     <td>${rental.getBook_title()}</td>
                     <td>${rental.getUser_name()}</td>
                     <td>${rental.getFrom_date()}</td>
                     <td>${rental.getTo_date()}</td>
                     <td>${rental.getPrice()}</td>
                     <td>
-                        <a href="${pageContext.request.contextPath}/admin/change-rental-status?id=${rental.getId()}&type=received_book">
-                                ${rental.getReceived_book() == "0" ? " <button class='btn-danger'>Chưa nhận</button>" : " <button class='btn-primary'>Đã nhận</button>"}
-                        </a>
+                        <c:choose>
+                            <c:when test="${rental.getReceived_book() == '0'}">
+                                <a href="${pageContext.request.contextPath}/admin/change-rental-status?id=${rental.getId()}&type=received_book">
+                                    <button class='btn-danger'>Chưa nhận</button>
+                                </a>
+                            </c:when>
+                            <c:when test="${rental.getReceived_book() == '1'}">
+                                <button onclick="toastr.warning('Người dùng đã nhận sách, không thể thay đổi trạng thái.')" class='btn-primary'>Đã nhận</button>
+                            </c:when>
+                        </c:choose>
+                        <%--<a href="${pageContext.request.contextPath}/admin/change-rental-status?id=${rental.getId()}&type=received_book">
+                                ${rental.getReceived_book() == "0" ? " <button class='btn-danger'>Chưa nhận</button>" : " <button onclick=\"toastr.warning('Người dùng đã nhận sách, không thể thay đổi trạng thái.')\" class='btn-primary'>Đã nhận</button>"}
+                        </a>--%>
                     </td>
                     <td>
                         <c:choose>
@@ -41,7 +51,15 @@
                                 <button class="btn-danger" onclick="toastr.warning('Người dùng chưa nhận sách, không thể thay đổi trạng thái.')">Chưa trả</button>
                             </c:when>
                             <c:when test="${rental.getReceived_book() == '1'}">
-                                    ${rental.getReturned_book() == "0" ? "<a href=\"${pageContext.request.contextPath}/admin/change-rental-status?id=${rental.getId()}&type=returned_book\"><button class='btn-danger'>Chưa trả</button></a>" : " <button onclick=\"toastr.warning('Người dùng chưa nhận sách, không thể thay đổi trạng thái.')\" class='btn-primary'>Đã trả</button>"}
+                                <c:choose>
+                                    <c:when test="${rental.getReturned_book() == '0'}">
+                                        <a href='${pageContext.request.contextPath}/admin/change-rental-status?id=${rental.getId()}&type=returned_book'><button class='btn-danger'>Chưa trả</button></a>
+                                    </c:when>
+                                    <c:when test="${rental.getReturned_book() == '1'}">
+                                        <button onclick="toastr.warning('Người dùng đã trả sách, không thể thay đổi trạng thái.')" class='btn-primary'>Đã trả</button>
+                                    </c:when>
+                                </c:choose>
+<%--                                    ${rental.getReturned_book() == "0" ? "<a href='/admin/change-rental-status?id=${rental.getId()}&type=returned_book'><button class='btn-danger'>Chưa trả</button></a>" : " <button onclick=\"toastr.warning('Người dùng chưa nhận sách, không thể thay đổi trạng thái.')\" class='btn-primary'>Đã trả</button>"}--%>
                             </c:when>
                         </c:choose>
                     </td>

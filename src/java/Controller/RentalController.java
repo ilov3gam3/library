@@ -42,7 +42,6 @@ public class RentalController {
             }
             boolean check = DB.executeUpdate(sql, new String[]{id});
             if (type.equals("returned_book")){
-                System.out.println("update book quan");
                 sql = "update books set renting = renting - 1 where id = (select book_id from rentals where rentals.id = ?)";
                 check = DB.executeUpdate(sql, new String[]{id});
             }

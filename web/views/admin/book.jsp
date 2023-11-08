@@ -50,16 +50,6 @@
 min-width: 70px;" class="btn btn-primary text-center">xem file</a>
                   </td>
                 <td class="col-1">
-                    <a style="width: 100%" href="/library/admin/genre/delete?id=1">
-                        <button class="btn btn-danger btn-block" style="
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    padding-right: 0;
-    padding-left: 0;
-min-width: 70px;">Xóa
-                        </button>
-                    </a>
                     <button type="button" onclick="showMyModal('${book.getId()}','${book.getTitle()}','${book.getDescription()}','${book.getAuthor_id()}','${book.getGenre_id()}','${book.getQuantity()}','${book.price}','${book.getCover_image()}','${book.getSoft_file()}', '${book.getYear()}')" data-toggle="modal" data-target="#editModal" class="btn btn-warning btn-block" style="
         border-top-width: 0;
         border-left-width: 0;
